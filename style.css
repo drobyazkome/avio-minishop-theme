@@ -1498,3 +1498,53 @@ html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .
   font-size: 12px;
   line-height: 1.35;
 }
+
+/* 1.5.9: compatibility with the production Core grid and empty checkout headers. */
+.theme-key-avio-landing .webapp-payment-dialog > .dialog-head-custom .dialog-close-button {
+  grid-column: 2;
+  justify-self: end;
+}
+.theme-key-avio-landing .webapp-payment-dialog > .dialog-head-custom:has(.dialog-title-block:empty) {
+  min-height: 34px;
+  align-items: center;
+}
+.theme-key-avio-landing .webapp-payment-dialog > .dialog-head-custom:has(.dialog-title-block:empty) .dialog-title-block {
+  display: none;
+}
+.theme-key-avio-landing .webapp-payment-dialog:has(> .dialog-head-custom .dialog-title-block:empty) {
+  gap: 6px;
+  padding: 12px;
+}
+.theme-key-avio-landing .webapp-payment-dialog:has(> .dialog-head-custom .dialog-title-block:empty) .dialog-close-button {
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  min-height: 34px;
+  border-radius: 12px;
+}
+.theme-key-avio-landing .checkout-tariff-fact {
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-rows: 36px 22px !important;
+  grid-auto-flow: row !important;
+  min-width: 0;
+  overflow: hidden;
+}
+.theme-key-avio-landing .checkout-tariff-fact > .checkout-tariff-fact-label {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  min-width: 0;
+  max-width: 100%;
+}
+.theme-key-avio-landing .checkout-tariff-fact > .checkout-addon-value {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.theme-key-avio-landing .checkout-tariff-fact .checkout-tariff-limit-icon {
+  flex: 0 0 13px;
+}
