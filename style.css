@@ -371,9 +371,44 @@
 }
 
 /* Checkout descriptions must remain readable beside the edit action. */
+.theme-key-avio-landing .webapp-payment-dialog {
+  font-synthesis: none;
+}
+.theme-key-avio-landing .subscription-purchase-description-header {
+  padding: 12px 14px;
+  border: 0;
+  border-left: 3px solid color-mix(in srgb, var(--accent) 72%, transparent);
+  border-radius: 0 14px 14px 0;
+  background: color-mix(in srgb, var(--panel-2) 58%, transparent);
+  box-shadow: none;
+}
+.theme-key-avio-landing .subscription-purchase-description-header p {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+.theme-key-avio-landing .tariff-step-caption {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.theme-key-avio-landing .checkout-tariff-card {
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--panel) 94%, transparent);
+  box-shadow: none;
+}
+.theme-key-avio-landing .checkout-tariff-card-head {
+  padding: 14px 14px 10px;
+}
 .theme-key-avio-landing .checkout-tariff-title-line > strong {
   flex: 0 1 auto;
   min-width: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
   overflow-wrap: anywhere;
 }
 .theme-key-avio-landing .checkout-tariff-description-line {
@@ -389,7 +424,83 @@
   overflow: visible;
   text-overflow: clip;
   overflow-wrap: anywhere;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
   line-height: 1.5;
+}
+.theme-key-avio-landing .checkout-tariff-summary-static {
+  padding: 0 0 8px;
+}
+.theme-key-avio-landing .checkout-tariff-fact {
+  min-height: 42px;
+}
+.theme-key-avio-landing .checkout-addon-label {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+.theme-key-avio-landing .checkout-addon-value,
+.theme-key-avio-landing .checkout-addon-unlimited {
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -.015em;
+}
+.theme-key-avio-landing .period-grid {
+  gap: 10px;
+}
+.theme-key-avio-landing .period-card {
+  min-height: 104px;
+  grid-template-rows: auto auto auto;
+  justify-items: start;
+  align-content: center;
+  gap: 7px;
+  padding: 14px;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+  text-align: left;
+  box-shadow: none;
+}
+.theme-key-avio-landing .period-card strong {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+}
+.theme-key-avio-landing .period-card > span,
+.theme-key-avio-landing .period-card .promo-price-pair {
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 650;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+}
+.theme-key-avio-landing .period-card small,
+.theme-key-avio-landing .period-card em {
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: left;
+}
+.theme-key-avio-landing .period-card.active {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--panel));
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.theme-key-avio-landing .period-card svg {
+  top: 12px;
+  right: 12px;
+}
+.theme-key-avio-landing .payment-method-picker-label,
+.theme-key-avio-landing .section-kicker {
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+.theme-key-avio-landing .payment-submit-button {
+  font-weight: 600;
 }
 
 /* Tickets need their full title width, independent of the viewport breakpoint. */
@@ -496,6 +607,7 @@ html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .
   .theme-key-avio-landing .home-bottom { padding: 14px; border-radius: 26px; }
   .theme-key-avio-landing.app-shell:has(.bottom-nav) { background-position: center, 66% top !important; background-attachment: scroll !important; }
   .theme-key-avio-landing :is(.period-card, .method-card, .option-row) { border-radius: 20px; }
+  .theme-key-avio-landing .period-card { border-radius: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .theme-key-avio-landing *,
