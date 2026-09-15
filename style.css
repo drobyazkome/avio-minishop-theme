@@ -490,27 +490,27 @@
   text-align: left;
 }
 .theme-key-avio-landing .period-card.active {
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 10%, var(--panel));
-  box-shadow: inset 0 0 0 1px var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 82%, var(--border));
+  background: color-mix(in srgb, var(--accent) 14%, var(--panel));
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--accent) 14%, transparent), inset 0 0 0 1.5px var(--accent);
 }
 .theme-key-avio-landing .period-grid .period-card:nth-child(4) {
   position: relative;
   overflow: hidden;
-  border-color: color-mix(in srgb, var(--accent) 48%, var(--border));
-  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 14%, var(--panel)), color-mix(in srgb, var(--panel) 92%, transparent));
+  border-color: color-mix(in srgb, #4f9460 58%, var(--border));
+  background: linear-gradient(145deg, color-mix(in srgb, #dff3d8 86%, var(--panel)), color-mix(in srgb, #f5fbf2 84%, var(--panel)));
 }
 .theme-key-avio-landing .period-grid .period-card:nth-child(4) strong,
 .theme-key-avio-landing .period-grid .period-card:nth-child(4) > span,
 .theme-key-avio-landing .period-grid .period-card:nth-child(4) .promo-price-pair {
-  color: var(--accent);
+  color: #347044;
 }
 .theme-key-avio-landing .period-grid .period-card:nth-child(4)::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(110deg, transparent 25%, color-mix(in srgb, var(--accent-contrast) 42%, transparent) 48%, transparent 70%);
+  background: linear-gradient(110deg, transparent 25%, color-mix(in srgb, #fff 68%, transparent) 48%, transparent 70%);
   transform: translateX(-125%);
   animation: avio-year-shine 4.8s ease-in-out infinite;
 }
@@ -867,33 +867,28 @@ html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .
 /* Home CTAs and inactive subscription state. */
 .theme-key-avio-landing .home-bottom .status-card-inactive {
   padding: 12px 14px;
-  border: 1px solid color-mix(in srgb, #d59521 46%, var(--border));
+  border: 1px solid color-mix(in srgb, #c74359 52%, var(--border));
   border-radius: 18px;
-  background: linear-gradient(135deg, color-mix(in srgb, #ffd875 26%, var(--panel)), color-mix(in srgb, #fff4d6 74%, var(--panel)));
+  background: linear-gradient(135deg, color-mix(in srgb, #ffdce2 78%, var(--panel)), color-mix(in srgb, #fff3f5 84%, var(--panel)));
   box-shadow: inset 0 1px 0 color-mix(in srgb, #fff 72%, transparent);
 }
 .theme-key-avio-landing .sub-status-inactive {
-  color: #8a5a00;
+  color: #a72f46;
 }
 .theme-key-avio-landing .sub-status-inactive > svg {
   display: none;
 }
 .theme-key-avio-landing .sub-status-inactive::before {
-  content: "!";
+  content: "";
   display: inline-grid;
-  width: 32px;
-  height: 32px;
-  flex: 0 0 32px;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
   place-items: center;
-  border: 2px solid currentColor;
-  border-radius: 999px;
-  background: color-mix(in srgb, #fff 62%, transparent);
-  font-size: 20px;
-  font-weight: 750;
-  line-height: 1;
+  background: url("images/subscription-off.png") center / contain no-repeat;
 }
 .theme-key-avio-landing .home-bottom .status-card-inactive h2 {
-  color: #68470b;
+  color: #8f263b;
   font-size: 16px;
   font-weight: 650;
 }
@@ -992,18 +987,27 @@ html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .
   color: #e4a11b;
   font-size: .82em;
 }
+.theme-key-avio-landing .tariff-list .tariff-row.active {
+  border-color: var(--accent);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 18%, var(--panel)), color-mix(in srgb, var(--accent) 7%, var(--panel)));
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 20%, transparent), inset 0 0 0 2px color-mix(in srgb, var(--accent) 72%, transparent);
+}
+.theme-key-avio-landing .tariff-list .tariff-row.active .option-row-main > strong,
+.theme-key-avio-landing .tariff-list .tariff-row.active .option-row-meta > em {
+  color: var(--accent);
+}
 
 /* Compact tariff details with the back action beside the dialog close button. */
 .theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) > .dialog-head-custom {
-  min-height: 36px;
+  min-height: 32px;
 }
 .theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) .back-inline {
-  position: absolute;
-  z-index: 5;
-  top: 18px;
-  left: 18px;
-  min-height: 36px;
-  padding: 0 10px;
+  position: static;
+  z-index: auto;
+  width: fit-content;
+  min-height: 34px;
+  margin: 0 0 2px;
+  padding: 0 11px;
   border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
   border-radius: 12px;
   background: color-mix(in srgb, var(--panel-2) 78%, transparent);
@@ -1035,7 +1039,100 @@ html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .
   grid-row: 1;
 }
 .theme-key-avio-landing .checkout-tariff-fact {
-  min-height: 32px;
+  min-height: 48px;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px;
+}
+.theme-key-avio-landing .checkout-tariff-fact .checkout-tariff-fact-label {
+  gap: 3px;
+}
+.theme-key-avio-landing .checkout-tariff-fact .checkout-addon-label {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.15;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.theme-key-avio-landing .checkout-tariff-fact > .checkout-addon-value {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.theme-key-avio-landing .checkout-tariff-editor-facts {
+  gap: 8px;
+}
+.theme-key-avio-landing .checkout-tariff-editor-fact {
+  gap: 6px;
+  padding: 9px 10px 7px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--panel-2) 88%, transparent);
+}
+.theme-key-avio-landing .checkout-tariff-editor-copy {
+  align-items: center;
+}
+.theme-key-avio-landing .checkout-tariff-editor-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+.theme-key-avio-landing .checkout-tariff-editor-copy small {
+  max-width: 48%;
+  overflow: visible;
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: right;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+/* Server status: keep the operational message readable on narrow screens. */
+.theme-key-avio-landing .server-status-card-action {
+  min-height: 64px;
+  padding: 10px 13px;
+}
+.theme-key-avio-landing .server-status-card-copy {
+  gap: 3px;
+}
+.theme-key-avio-landing .server-status-card-copy > strong {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.theme-key-avio-landing .server-status-card-copy > small {
+  overflow: visible;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.22;
+  opacity: 1;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+/* Inactive state on the Devices screen. */
+.theme-key-avio-landing .devices-inactive-card {
+  border-color: color-mix(in srgb, #c74359 52%, var(--border));
+  background: linear-gradient(135deg, color-mix(in srgb, #ffdce2 78%, var(--panel)), color-mix(in srgb, #fff3f5 84%, var(--panel)));
+  color: #8f263b;
+}
+.theme-key-avio-landing .devices-inactive-card > svg {
+  display: none;
+}
+.theme-key-avio-landing .devices-inactive-card::before {
+  content: "";
+  width: 38px;
+  height: 38px;
+  background: url("images/subscription-off.png") center / contain no-repeat;
+}
+.theme-key-avio-landing .devices-inactive-card > span {
+  color: #8f263b;
+  font-size: 16px;
+  font-weight: 650;
 }
 
 @keyframes avio-home-cta-breathe {
@@ -1079,8 +1176,7 @@ html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .
   }
   .theme-key-avio-landing .checkout-tariff-edit::after { display: none; }
   .theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) .back-inline {
-    left: 14px;
-    max-width: calc(100% - 76px);
+    max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
