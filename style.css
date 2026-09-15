@@ -1312,3 +1312,68 @@ html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .
     padding: 12px;
   }
 }
+
+/* 1.5.7: keep tariff navigation in the document flow. */
+.theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) > .dialog-head-custom {
+  min-height: 32px;
+}
+.theme-key-avio-landing .payment-dialog-body:has(> .back-inline) {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 8px;
+}
+.theme-key-avio-landing .payment-dialog-body:has(> .back-inline) > .back-inline {
+  position: static !important;
+  z-index: auto;
+  grid-column: 1;
+  grid-row: 1;
+  width: 38px;
+  max-width: 38px;
+  min-height: 34px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  gap: 0;
+  overflow: hidden;
+  font-size: 0;
+  box-shadow: none;
+}
+.theme-key-avio-landing .payment-dialog-body:has(> .back-inline) > .back-inline > svg {
+  width: 18px;
+  height: 18px;
+}
+.theme-key-avio-landing .payment-dialog-body:has(> .back-inline) > .tariff-step-caption {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+}
+.theme-key-avio-landing .payment-dialog-body:has(> .back-inline) > :not(.back-inline):not(.tariff-step-caption) {
+  grid-column: 1 / -1;
+}
+
+.theme-key-avio-landing .checkout-tariff-fact {
+  align-items: center !important;
+  justify-items: center;
+  text-align: center;
+}
+.theme-key-avio-landing .checkout-tariff-fact-label {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+.theme-key-avio-landing .checkout-tariff-fact .checkout-addon-label {
+  display: block;
+  overflow: visible;
+  width: auto;
+  font-size: 9.5px;
+  line-height: 1.15;
+  text-align: center;
+  text-overflow: clip;
+  white-space: normal;
+  -webkit-line-clamp: initial;
+}
+.theme-key-avio-landing .checkout-tariff-fact > .checkout-addon-value {
+  width: 100%;
+  text-align: center;
+}
