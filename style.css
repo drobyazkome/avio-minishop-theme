@@ -1,0 +1,511 @@
+/* Avio landing palette. All assets are local to this installable package. */
+@font-face {
+  font-family: "Avio Onest";
+  src: url("fonts/Onest.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avio Rubik";
+  src: url("fonts/Rubik.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Keep editable colors in the selectors recognized by the Core theme editor. */
+.theme-key-avio-landing {
+  --avio-peach: #fff0e6;
+  --avio-peach-ink: #a36542;
+  --avio-sky: #e8edf9;
+  --avio-sky-ink: #5876ad;
+  --avio-backdrop-top: rgb(247 245 252 / .08);
+  --avio-backdrop-middle: rgb(247 245 252 / .18);
+  --avio-backdrop-bottom: rgb(247 245 252 / .75);
+  --avio-admin-bg: #e7f4df;
+  --avio-admin-hover: #dcedd2;
+  --avio-admin-border: #c1d9b5;
+  --avio-admin-border-hover: #a8c997;
+  --avio-admin-accent: #52773d;
+  --avio-admin-ink: #35572e;
+  --avio-admin-muted: #536b4c;
+}
+.theme-key-avio-landing.app-shell {
+  background: radial-gradient(ellipse at 58% 10%, var(--panel-2), transparent 55%), var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+}
+.theme-key-avio-landing.theme-variant-dark {
+  --avio-peach: #49352f;
+  --avio-peach-ink: #efb99b;
+  --avio-sky: #2d354c;
+  --avio-sky-ink: #b6cafa;
+  --avio-backdrop-top: rgb(32 26 44 / .66);
+  --avio-backdrop-middle: rgb(32 26 44 / .72);
+  --avio-backdrop-bottom: rgb(32 26 44 / .94);
+}
+.theme-key-avio-landing :is(h1, h2, h3) {
+  font-family: var(--font-logo);
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+.theme-key-avio-landing :is(.card, .status-card, .period-card, .method-card, .option-row, .dialog-card, .home-compact-summary, .home-balance-card) {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--panel) calc(var(--theme-transparency, 1) * 100%), transparent);
+  box-shadow: none;
+}
+.theme-key-avio-landing :is(.home-compact-summary, .home-balance-card) {
+  background: linear-gradient(120deg, var(--panel-2), var(--panel));
+}
+.theme-key-avio-landing .home-brand {
+  gap: 0;
+  padding-block: 24px;
+}
+.theme-key-avio-landing .home-brand h1,
+.theme-key-avio-landing .app-header .brand-row > strong,
+.theme-key-avio-landing .rail-brand > strong {
+  /* Keep the page heading available to assistive technology without
+     duplicating the wordmark visually. */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.theme-key-avio-landing :is(.app-header .brand-row, .rail-brand) {
+  gap: 0;
+}
+.theme-key-avio-landing.app-shell :is(.app-header .brand-row, .rail-brand) .brand-mark {
+  width: 62.4px;
+  height: 39.6px;
+}
+.theme-key-avio-landing .brand-mark img {
+  /* The bundled Avio artwork has a separate VPN badge in its bottom quarter. */
+  height: auto;
+  clip-path: inset(0 0 25% 0);
+  filter: brightness(0) saturate(100%) invert(30%) sepia(24%) saturate(1311%) hue-rotate(220deg) brightness(96%) contrast(89%);
+}
+.theme-key-avio-landing.theme-dark .brand-mark img {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(19%) saturate(720%) hue-rotate(218deg) brightness(101%) contrast(86%);
+}
+.theme-key-avio-landing .home-brand .brand-mark img {
+  clip-path: none;
+}
+.theme-key-avio-landing.app-shell .home-brand .brand-mark.brand-mark-xl {
+  width: calc(clamp(225px, 27vw, 285px) * var(--home-logo-scale-effective, 1));
+  height: calc(clamp(142.5px, 18vw, 180px) * var(--home-logo-scale-effective, 1));
+  max-width: 100%;
+}
+.theme-key-avio-landing .home-brand::after {
+  content: none;
+}
+.theme-key-avio-landing.app-shell:has(.bottom-nav) {
+  /* Core resets the shell background with !important in its layout layer. */
+  background-color: var(--bg) !important;
+  background-image: linear-gradient(180deg, var(--avio-backdrop-top), var(--avio-backdrop-middle) 48%, var(--avio-backdrop-bottom)), url("images/avio-background-v2.png") !important;
+  background-position: center, center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+.theme-key-avio-landing .home-layout > .home-brand {
+  align-self: start;
+}
+.theme-key-avio-landing.app-shell:has(.bottom-nav) .phone-screen {
+  background: transparent !important;
+}
+.theme-key-avio-landing .home-bottom {
+  border-radius: 28px;
+  padding: 18px;
+  background: color-mix(in srgb, var(--panel) calc(var(--theme-transparency, 1) * 88%), transparent);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+}
+.theme-key-avio-landing .btn {
+  border-radius: 16px;
+  min-height: 44px;
+  font-weight: 500;
+  box-shadow: none;
+}
+/* One quiet surface for the home summary; traffic is separated by rules. */
+.theme-key-avio-landing .home-bottom :is(.status-card, .traffic-card-compact) {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 12px 0;
+}
+.theme-key-avio-landing .home-bottom .traffic-card-compact {
+  border-top: 1px solid var(--border);
+}
+.theme-key-avio-landing .home-bottom .status-card h2 {
+  color: var(--text);
+  font-weight: 600;
+}
+.theme-key-avio-landing :is(.settings-row, .option-row) {
+  border-radius: 18px;
+}
+.theme-key-avio-landing :is(.btn, .settings-row, .bottom-nav button) {
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+.theme-key-avio-landing :is(.btn, .settings-row, .bottom-nav button):active:not(:disabled) {
+  transform: translateY(1px);
+}
+.theme-key-avio-landing .settings-row.settings-row-admin {
+  --warning: var(--avio-admin-accent);
+  --warning-text: var(--avio-admin-ink);
+  --warning-border: var(--avio-admin-border);
+  --muted: var(--avio-admin-muted);
+  background: var(--avio-admin-bg);
+  border-color: var(--warning-border);
+  color: var(--warning-text);
+}
+.theme-key-avio-landing .settings-row.settings-row-admin:hover:not(:disabled) {
+  background: var(--avio-admin-hover);
+  border-color: var(--avio-admin-border-hover);
+}
+.theme-key-avio-landing .btn-primary {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: 1px solid transparent;
+}
+.theme-key-avio-landing .btn-primary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 88%, var(--text));
+  box-shadow: 0 5px 16px color-mix(in srgb, var(--accent) 14%, transparent);
+}
+.theme-key-avio-landing :is(.btn-secondary, .btn-outline) {
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.theme-key-avio-landing :is(.btn-ghost, .btn-icon) { color: var(--text); }
+.theme-key-avio-landing :is(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.theme-key-avio-landing :is(button, input, select, textarea):disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+.theme-key-avio-landing :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), textarea) {
+  border-radius: 14px;
+  font-family: var(--font-ui);
+}
+.theme-key-avio-landing :is(.period-card, .method-card).active {
+  border-color: var(--accent);
+  background: var(--panel-2);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.theme-key-avio-landing .bottom-nav {
+  background: color-mix(in srgb, var(--nav-bg) 90%, transparent);
+  border-color: var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+}
+.theme-key-avio-landing .bottom-nav button {
+  color: var(--muted);
+  border-radius: 16px;
+}
+.theme-key-avio-landing .bottom-nav button.active {
+  color: var(--accent);
+  background: var(--panel-2);
+  box-shadow: none;
+}
+.theme-key-avio-landing :is(.install-platform-trigger, .install-apps button, .install-step, .install-subscription-card) {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: none;
+}
+.theme-key-avio-landing .install-platform-trigger { min-height: 48px; border-radius: 24px; }
+.theme-key-avio-landing .install-apps button { min-height: 52px; border-radius: 16px; }
+.theme-key-avio-landing .install-apps button.active {
+  background: var(--panel-2);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.theme-key-avio-landing :is(.install-topbar p, .install-step-body p, .install-subscription-heading p) {
+  color: var(--muted);
+  line-height: 1.7;
+}
+.theme-key-avio-landing :is(.install-step-icon, .install-subscription-header-icon) {
+  background: var(--panel-2);
+  color: var(--accent);
+  border-radius: 16px;
+}
+.theme-key-avio-landing .install-step-motion:nth-child(2) .install-step-icon {
+  background: var(--avio-peach);
+  color: var(--avio-peach-ink);
+}
+.theme-key-avio-landing .install-step-motion:nth-child(3) .install-step-icon {
+  background: var(--avio-sky);
+  color: var(--avio-sky-ink);
+}
+.theme-key-avio-landing .install-qr-wrap {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+.theme-key-avio-landing .install-qr-wrap img { filter: none; mix-blend-mode: normal; }
+
+/* App icons: match the native SVG identity, never the app's position. */
+.theme-key-avio-landing .install-apps .install-svg {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 12px;
+  background: #30283f;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.theme-key-avio-landing .install-apps .install-svg:has(path[d^="M22.3264 3H12.3611"]) {
+  background: url("images/happ-appstore.jpg") center / cover;
+}
+.theme-key-avio-landing .install-apps .install-svg:has(path[d^="M5.828 31V19.8"]) {
+  background: url("images/incy-appstore.jpg") center / cover;
+}
+.theme-key-avio-landing .install-apps .install-svg:has(path[d^="M22.3264 3H12.3611"]) svg,
+.theme-key-avio-landing .install-apps .install-svg:has(path[d^="M5.828 31V19.8"]) svg {
+  visibility: hidden;
+}
+.theme-key-avio-landing .install-apps .install-svg:has(path[d^="M38.1165 40.751"]) {
+  background: #fff url("images/flclashx-official.png") center / cover;
+}
+.theme-key-avio-landing .install-apps .install-svg:has(path[d^="M11.2 23.031"]) {
+  background: #fff url("images/koala-official.png") center / cover;
+}
+.theme-key-avio-landing .install-apps .install-svg:has(path[d="M12 16h26M12 25h17M12 34h10"]) {
+  background: #fff url("images/flowvy-official.png") center / cover;
+}
+.theme-key-avio-landing .install-apps .install-svg:has(path[d="M11.5 20h27M11.5 30h27"]) {
+  background: #fff url("images/anywhere-official.jpg") center / cover;
+}
+.theme-key-avio-landing .install-apps .install-svg:has(path[d^="M20.1587 31.9985"]) {
+  background: #fff url("images/karing-official.jpg") center / cover;
+}
+.theme-key-avio-landing .install-apps .install-svg:has(path[d^="M38.1165 40.751"], path[d^="M11.2 23.031"], path[d="M12 16h26M12 25h17M12 34h10"], path[d="M11.5 20h27M11.5 30h27"], path[d^="M20.1587 31.9985"]) svg {
+  visibility: hidden;
+}
+.theme-key-avio-landing .install-apps button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 92px;
+  padding: 14px;
+  gap: 10px;
+  font-weight: 600;
+}
+.theme-key-avio-landing .install-apps button.active {
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.theme-key-avio-landing .install-steps {
+  counter-reset: avio-install-step;
+  gap: 16px;
+}
+.theme-key-avio-landing .install-step-motion {
+  counter-increment: avio-install-step;
+}
+.theme-key-avio-landing .install-step {
+  position: relative;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: start;
+  padding: 18px;
+  gap: 12px;
+}
+.theme-key-avio-landing .install-steps .install-step-motion .install-step-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: none;
+}
+.theme-key-avio-landing .install-step-icon svg { display: none; }
+.theme-key-avio-landing .install-step-icon::before {
+  content: counter(avio-install-step);
+  color: var(--accent-contrast);
+  font: 600 16px var(--font-ui);
+}
+.theme-key-avio-landing .install-step-body { gap: 12px; }
+.theme-key-avio-landing .install-step-body h2 {
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: -.015em;
+}
+.theme-key-avio-landing .install-step-body p {
+  font-size: 14px;
+  line-height: 1.55;
+  white-space: pre-line;
+}
+.theme-key-avio-landing .install-actions {
+  flex-direction: column;
+  gap: 10px;
+}
+.theme-key-avio-landing .install-actions .btn {
+  flex: 0 0 auto;
+  width: 100%;
+  min-height: 48px;
+  height: auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+  padding: 12px;
+}
+.theme-key-avio-landing .install-step-motion:first-child .install-actions .btn ~ .btn {
+  background: var(--surface-subtle);
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+/* Checkout descriptions must remain readable beside the edit action. */
+.theme-key-avio-landing .checkout-tariff-title-line > strong {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.theme-key-avio-landing .checkout-tariff-description-line {
+  flex-basis: 100%;
+  gap: 0;
+}
+.theme-key-avio-landing .checkout-tariff-title-separator {
+  display: none;
+}
+.theme-key-avio-landing .checkout-tariff-description-line > small {
+  display: block;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+/* Tickets need their full title width, independent of the viewport breakpoint. */
+.theme-key-avio-landing :is(.support-conversation-card, .ticket-composer) {
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
+}
+.theme-key-avio-landing .support-conversation-card > * {
+  min-width: 0;
+}
+.theme-key-avio-landing .ticket-composer-row {
+  flex-wrap: wrap;
+}
+.theme-key-avio-landing .support-screen {
+  grid-template-rows: auto auto;
+  align-content: start;
+}
+.theme-key-avio-landing .support-list-card {
+  grid-template-rows: auto auto;
+  align-content: start;
+}
+.theme-key-avio-landing .support-ticket-list-scroll {
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
+.theme-key-avio-landing .support-ticket-list-scroll .scroll-area__viewport {
+  height: auto;
+  max-height: none;
+  /* The scroll primitive sets overflow inline; this list scrolls with the page. */
+  overflow: visible !important;
+}
+.theme-key-avio-landing .support-ticket-list-scroll :is(.scroll-area__scrollbar, .scroll-area__corner) {
+  display: none;
+}
+.theme-key-avio-landing .support-list-card .ticket-list { padding: 0; gap: 12px; }
+.theme-key-avio-landing .ticket-card {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  padding: 16px 18px 16px 22px;
+  border-radius: 18px;
+  background: var(--surface-subtle);
+}
+.theme-key-avio-landing .ticket-card-main { gap: 8px; }
+.theme-key-avio-landing .ticket-card-title { align-items: flex-start; }
+.theme-key-avio-landing .ticket-card-title svg { margin-top: 3px; }
+.theme-key-avio-landing .ticket-card-title strong {
+  display: block;
+  white-space: normal;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  text-overflow: clip;
+  -webkit-line-clamp: unset;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+.theme-key-avio-landing .ticket-card-meta { font-weight: 400; line-height: 1.5; }
+.theme-key-avio-landing .ticket-card-side {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.theme-key-avio-landing .ticket-card-badges {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Current Core mirrors tokens onto html, including controls portalled to body. */
+html.theme-key-avio-landing :is(.app-toast, .language-select-content, .install-platform-content, .support-select-content, .field-error-tooltip) {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-family: var(--font-ui);
+  box-shadow: var(--shadow-popover);
+}
+html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .support-select-item)[data-highlighted] {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+/* Core already renders this action only for administrators. */
+@media (max-width: 1023px) {
+  .theme-key-avio-landing .bottom-nav:has(> .rail-admin-entry) {
+    grid-template-columns: repeat(calc(var(--bottom-nav-visible-items, 5) + 1), minmax(0, 1fr));
+  }
+  .theme-key-avio-landing .bottom-nav > .rail-admin-entry {
+    display: grid !important;
+    min-width: 0;
+    color: var(--avio-admin-ink);
+    background: var(--avio-admin-bg);
+  }
+  .theme-key-avio-landing .bottom-nav > .rail-admin-entry .bottom-nav-label {
+    font-size: 10px;
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 640px) {
+  .theme-key-avio-landing .home-brand { padding-block: 20px; }
+  .theme-key-avio-landing .home-bottom { padding: 14px; border-radius: 26px; }
+  .theme-key-avio-landing.app-shell:has(.bottom-nav) { background-position: center, 66% top !important; background-attachment: scroll !important; }
+  .theme-key-avio-landing :is(.period-card, .method-card, .option-row) { border-radius: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-key-avio-landing *,
+  .theme-key-avio-landing *::before,
+  .theme-key-avio-landing *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (max-width: 640px) and (max-height: 740px) {
+  .theme-key-avio-landing .home-brand { padding-block: 8px; }
+}
