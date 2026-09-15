@@ -1377,3 +1377,124 @@ html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .
   width: 100%;
   text-align: center;
 }
+
+/* 1.5.8: denser checkout header and aligned tariff facts. */
+.theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) {
+  gap: 6px;
+  padding: 12px;
+}
+.theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) > .dialog-head-custom {
+  min-height: 34px;
+  align-items: center;
+}
+.theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) > .dialog-head-custom .dialog-title-block {
+  display: none;
+}
+.theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) .dialog-close-button {
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  min-height: 34px;
+  border-radius: 12px;
+}
+.theme-key-avio-landing .checkout-tariff-facts {
+  align-items: stretch;
+}
+.theme-key-avio-landing .checkout-tariff-fact {
+  display: grid !important;
+  grid-template-rows: 36px 22px;
+  place-items: center !important;
+  align-content: center;
+  min-height: 70px;
+  gap: 4px;
+}
+.theme-key-avio-landing .checkout-tariff-fact-label {
+  align-self: center;
+  justify-self: stretch;
+  min-height: 36px;
+  align-items: center;
+}
+.theme-key-avio-landing .checkout-tariff-fact .checkout-addon-label {
+  width: 100%;
+  font-size: 9px;
+  line-height: 1.14;
+}
+.theme-key-avio-landing .checkout-tariff-fact > .checkout-addon-value {
+  align-self: center;
+  justify-self: center;
+  line-height: 1;
+}
+
+/* Tariff change dialog follows the same hierarchy as the tariff catalogue. */
+.theme-key-avio-landing .webapp-tariff-change-dialog .payment-dialog-body {
+  gap: 10px;
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .section-kicker {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: .035em;
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .tariff-action-list {
+  gap: 10px;
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .tariff-action-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: 104px;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--panel) 94%, transparent);
+  box-shadow: none;
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .tariff-action-card > span {
+  gap: 5px;
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .tariff-action-card strong {
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .tariff-action-card small {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.38;
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .tariff-action-card em {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 10%, var(--panel-2));
+  font-size: 11px;
+  font-weight: 650;
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .tariff-action-card.active {
+  border-color: var(--accent);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 20%, var(--panel)), color-mix(in srgb, var(--accent) 9%, var(--panel)));
+  box-shadow: 0 9px 24px color-mix(in srgb, var(--accent) 16%, transparent), inset 0 0 0 2px var(--accent);
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .tariff-action-card.active strong,
+.theme-key-avio-landing .webapp-tariff-change-dialog .tariff-action-card.active em {
+  color: var(--accent);
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .change-action-row {
+  min-height: 70px;
+  padding: 12px 14px;
+  border-radius: 18px;
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .change-action-row.active {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 11%, var(--panel));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 56%, transparent);
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .change-action-row .option-row-main > strong {
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.28;
+}
+.theme-key-avio-landing .webapp-tariff-change-dialog .change-action-row .option-row-main > small {
+  font-size: 12px;
+  line-height: 1.35;
+}
