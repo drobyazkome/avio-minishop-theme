@@ -1182,3 +1182,133 @@ html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .
     white-space: nowrap;
   }
 }
+
+/* 1.5.6: compact mobile home and clearer tariff hierarchy. */
+.theme-key-avio-landing .home-bottom .status-card-inactive {
+  padding: 10px 12px;
+}
+.theme-key-avio-landing .sub-status-inactive::before,
+.theme-key-avio-landing .devices-inactive-card::before {
+  background-image: url("images/subscription-unlocked.png");
+}
+.theme-key-avio-landing .server-status-card.card {
+  border-color: color-mix(in srgb, #69a96f 48%, var(--border));
+  background: linear-gradient(135deg, color-mix(in srgb, #e4f4df 88%, var(--panel)), color-mix(in srgb, #f4fbf1 82%, var(--panel)));
+  box-shadow: inset 0 1px 0 color-mix(in srgb, #fff 72%, transparent);
+}
+.theme-key-avio-landing .server-status-card-icon {
+  color: #347044;
+  background: color-mix(in srgb, #8fcf95 26%, transparent);
+}
+.theme-key-avio-landing .server-status-card-copy > small {
+  color: #285d35;
+}
+
+/* Premium is warm-gold; selection stays purple and cannot be mistaken for it. */
+.theme-key-avio-landing .tariff-list .tariff-row:nth-child(2) {
+  border-color: color-mix(in srgb, #d69b32 62%, var(--border));
+  background: linear-gradient(145deg, color-mix(in srgb, #fff0cf 74%, var(--panel)), color-mix(in srgb, #fff8e9 70%, var(--panel)));
+  box-shadow: 0 9px 24px color-mix(in srgb, #b77a18 13%, transparent), inset 0 0 0 1px color-mix(in srgb, #d69b32 26%, transparent);
+}
+.theme-key-avio-landing .tariff-list .tariff-row:nth-child(2) .option-row-main > strong,
+.theme-key-avio-landing .tariff-list .tariff-row:nth-child(2) .option-row-meta > em {
+  color: #8d5b0b;
+}
+.theme-key-avio-landing .tariff-list .tariff-row.active {
+  border-color: var(--accent);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 20%, var(--panel)), color-mix(in srgb, var(--accent) 9%, var(--panel)));
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 20%, transparent), inset 0 0 0 2px var(--accent);
+}
+.theme-key-avio-landing .tariff-list .tariff-row:nth-child(2).active {
+  background: linear-gradient(145deg, color-mix(in srgb, #fff0cf 78%, var(--panel)), color-mix(in srgb, #fff8e9 72%, var(--panel)));
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 20%, transparent), inset 0 0 0 2px var(--accent);
+}
+
+/* The back action visually belongs to the fixed dialog header. */
+.theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) > .dialog-head-custom {
+  position: relative;
+  z-index: 12;
+  min-height: 38px;
+  background: color-mix(in srgb, var(--panel) 96%, var(--bg));
+}
+.theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) .back-inline {
+  position: absolute;
+  z-index: 20;
+  top: 18px;
+  left: 18px;
+  width: auto;
+  max-width: calc(100% - 82px);
+  min-height: 36px;
+  margin: 0;
+  padding: 0 11px;
+  background: color-mix(in srgb, var(--panel-2) 88%, var(--panel));
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--accent) 9%, transparent);
+}
+
+/* Three compact facts replace the tall row stack used by older Core builds. */
+.theme-key-avio-landing .checkout-tariff-card-head {
+  gap: 3px 7px;
+  padding: 10px 10px 7px;
+}
+.theme-key-avio-landing .checkout-tariff-description-line > small {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 11px;
+  line-height: 1.3;
+  text-overflow: clip;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.theme-key-avio-landing .checkout-tariff-facts {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  padding: 0 7px 8px;
+}
+.theme-key-avio-landing .checkout-tariff-fact {
+  display: flex !important;
+  min-height: 52px;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 3px;
+  padding: 6px 7px !important;
+  border-top: 0 !important;
+}
+.theme-key-avio-landing .checkout-tariff-fact + .checkout-tariff-fact {
+  border-left: 1px solid var(--border) !important;
+}
+.theme-key-avio-landing .checkout-tariff-fact > .checkout-addon-value {
+  order: 2;
+  font-size: 14px;
+}
+.theme-key-avio-landing .checkout-tariff-fact-label {
+  order: 1;
+}
+.theme-key-avio-landing .checkout-tariff-edit {
+  min-width: 132px;
+  height: 34px;
+  padding: 0 10px;
+}
+.theme-key-avio-landing .checkout-tariff-editor-fact {
+  padding: 7px 9px 6px;
+}
+
+@media (max-width: 640px) and (min-height: 741px) {
+  .theme-key-avio-landing .phone-screen.home-screen {
+    height: 100dvh;
+    min-height: 100dvh;
+    overflow-y: hidden;
+  }
+  .theme-key-avio-landing .home-layout {
+    min-height: calc(100dvh - 64px);
+    gap: 10px;
+  }
+  .theme-key-avio-landing .home-brand {
+    padding-block: 8px;
+  }
+  .theme-key-avio-landing .home-bottom {
+    gap: 8px;
+    padding: 12px;
+  }
+}
