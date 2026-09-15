@@ -537,17 +537,14 @@
   display: none;
 }
 .theme-key-avio-landing .payment-submit-button::before {
-  content: "→";
+  content: "";
   display: inline-grid;
   width: 24px;
   height: 24px;
   flex: 0 0 24px;
   place-items: center;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--accent-contrast) 18%, transparent);
-  color: var(--accent-contrast);
-  font-size: 18px;
-  line-height: 1;
+  background: color-mix(in srgb, var(--accent-contrast) 18%, transparent) url("images/action-arrow.png") center / 15px 15px no-repeat;
 }
 .theme-key-avio-landing .payment-submit-button::after {
   content: "";
@@ -866,6 +863,193 @@ html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .
 .theme-key-avio-landing .bottom-nav button.active > svg {
   animation: avio-nav-icon-float 2.4s ease-in-out infinite;
 }
+
+/* Home CTAs and inactive subscription state. */
+.theme-key-avio-landing .home-bottom .status-card-inactive {
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, #d59521 46%, var(--border));
+  border-radius: 18px;
+  background: linear-gradient(135deg, color-mix(in srgb, #ffd875 26%, var(--panel)), color-mix(in srgb, #fff4d6 74%, var(--panel)));
+  box-shadow: inset 0 1px 0 color-mix(in srgb, #fff 72%, transparent);
+}
+.theme-key-avio-landing .sub-status-inactive {
+  color: #8a5a00;
+}
+.theme-key-avio-landing .sub-status-inactive > svg {
+  display: none;
+}
+.theme-key-avio-landing .sub-status-inactive::before {
+  content: "!";
+  display: inline-grid;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  place-items: center;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  background: color-mix(in srgb, #fff 62%, transparent);
+  font-size: 20px;
+  font-weight: 750;
+  line-height: 1;
+}
+.theme-key-avio-landing .home-bottom .status-card-inactive h2 {
+  color: #68470b;
+  font-size: 16px;
+  font-weight: 650;
+}
+.theme-key-avio-landing .action-stack > .btn:first-child:not([data-webapp-action]),
+.theme-key-avio-landing .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"],
+.theme-key-avio-landing .subscription-renew-action {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.theme-key-avio-landing .action-stack > .btn:first-child:not([data-webapp-action]) > svg,
+.theme-key-avio-landing .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"] > svg,
+.theme-key-avio-landing .subscription-renew-action > svg {
+  display: none;
+}
+.theme-key-avio-landing .action-stack > .btn:first-child:not([data-webapp-action])::before,
+.theme-key-avio-landing .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"]::before,
+.theme-key-avio-landing .subscription-renew-action::before {
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  place-items: center;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1;
+}
+.theme-key-avio-landing .action-stack > .btn:first-child:not([data-webapp-action])::before {
+  content: "";
+  border: 1.5px solid color-mix(in srgb, var(--accent-contrast) 78%, transparent);
+  background:
+    linear-gradient(var(--accent-contrast), var(--accent-contrast)) center / 10px 1.5px no-repeat,
+    linear-gradient(var(--accent-contrast), var(--accent-contrast)) center / 1.5px 10px no-repeat;
+}
+.theme-key-avio-landing .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"]::before {
+  content: "";
+  background: color-mix(in srgb, var(--accent-contrast) 18%, transparent) url("images/action-arrow.png") center / 15px 15px no-repeat;
+}
+.theme-key-avio-landing .subscription-renew-action {
+  border-color: color-mix(in srgb, #67a96f 48%, var(--border));
+  background: linear-gradient(135deg, color-mix(in srgb, #dff3d8 88%, var(--panel)), color-mix(in srgb, #ccebc6 72%, var(--panel)));
+  color: #315d39;
+  box-shadow: 0 8px 22px color-mix(in srgb, #67a96f 18%, transparent);
+  animation: avio-renew-breathe 3.1s ease-in-out infinite;
+}
+.theme-key-avio-landing .subscription-renew-action::before {
+  content: "";
+  border: 1px solid color-mix(in srgb, #315d39 38%, transparent);
+  background: color-mix(in srgb, #fff 52%, transparent) url("images/action-renew.png") center / 15px 15px no-repeat;
+}
+.theme-key-avio-landing .action-stack > .btn:first-child:not([data-webapp-action]),
+.theme-key-avio-landing .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"] {
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 25%, transparent);
+  animation: avio-home-cta-breathe 2.8s ease-in-out infinite;
+}
+
+/* Tariff catalogue: the configured second item is Premium in the current shop. */
+.theme-key-avio-landing .tariff-list {
+  display: grid;
+  gap: 10px;
+}
+.theme-key-avio-landing .tariff-list .tariff-row {
+  min-height: 104px;
+  padding: 14px 16px;
+}
+.theme-key-avio-landing .tariff-row .option-row-main > strong {
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+.theme-key-avio-landing .tariff-row .option-row-main > small {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.38;
+}
+.theme-key-avio-landing .tariff-row .option-row-meta > em {
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.22;
+}
+.theme-key-avio-landing .tariff-list .tariff-row:nth-child(2) {
+  order: -1;
+  border-color: color-mix(in srgb, var(--accent) 58%, var(--border));
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 13%, var(--panel)), color-mix(in srgb, var(--panel) 94%, transparent));
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 14%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--accent) 24%, transparent);
+  animation: avio-premium-breathe 3.2s ease-in-out infinite;
+}
+.theme-key-avio-landing .tariff-list .tariff-row:nth-child(2) .option-row-main > strong,
+.theme-key-avio-landing .tariff-list .tariff-row:nth-child(2) .option-row-meta > em {
+  color: var(--accent);
+}
+.theme-key-avio-landing .tariff-list .tariff-row:nth-child(2) .option-row-main > strong::after {
+  content: "★";
+  margin-left: 7px;
+  color: #e4a11b;
+  font-size: .82em;
+}
+
+/* Compact tariff details with the back action beside the dialog close button. */
+.theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) > .dialog-head-custom {
+  min-height: 36px;
+}
+.theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) .back-inline {
+  position: absolute;
+  z-index: 5;
+  top: 18px;
+  left: 18px;
+  min-height: 36px;
+  padding: 0 10px;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--panel-2) 78%, transparent);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+}
+.theme-key-avio-landing .checkout-tariff-card-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 8px;
+}
+.theme-key-avio-landing .checkout-tariff-title-line {
+  display: contents;
+}
+.theme-key-avio-landing .checkout-tariff-title-line > strong {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+}
+.theme-key-avio-landing .checkout-tariff-description-line,
+.theme-key-avio-landing .checkout-tariff-title-line.is-wrapped .checkout-tariff-description-line {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-top: 1px;
+}
+.theme-key-avio-landing .checkout-tariff-edit {
+  grid-column: 2;
+  grid-row: 1;
+}
+.theme-key-avio-landing .checkout-tariff-fact {
+  min-height: 32px;
+}
+
+@keyframes avio-home-cta-breathe {
+  0%, 100% { transform: translateY(0); box-shadow: 0 9px 24px color-mix(in srgb, var(--accent) 22%, transparent); }
+  50% { transform: translateY(-1px); box-shadow: 0 13px 30px color-mix(in srgb, var(--accent) 34%, transparent); }
+}
+@keyframes avio-renew-breathe {
+  0%, 100% { transform: translateY(0); box-shadow: 0 7px 20px color-mix(in srgb, #67a96f 15%, transparent); }
+  50% { transform: translateY(-1px); box-shadow: 0 11px 27px color-mix(in srgb, #67a96f 27%, transparent); }
+}
+@keyframes avio-premium-breathe {
+  0%, 100% { box-shadow: 0 8px 22px color-mix(in srgb, var(--accent) 11%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--accent) 22%, transparent); }
+  50% { box-shadow: 0 13px 30px color-mix(in srgb, var(--accent) 22%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--accent) 42%, transparent); }
+}
 .theme-key-avio-landing :is(
   .btn,
   .period-card,
@@ -894,4 +1078,11 @@ html.theme-key-avio-landing :is(.install-platform-item, .language-select-item, .
     padding: 0;
   }
   .theme-key-avio-landing .checkout-tariff-edit::after { display: none; }
+  .theme-key-avio-landing .webapp-payment-dialog:has(.back-inline) .back-inline {
+    left: 14px;
+    max-width: calc(100% - 76px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

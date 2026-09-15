@@ -6,7 +6,7 @@
   "use_primary_accent": false,
   "use_in_admin": false,
   "css_file": "style.css",
-  "assets_version": 21,
+  "assets_version": 22,
   "active_variant": "light",
   "tokens": {
     "style_preset": "none",
