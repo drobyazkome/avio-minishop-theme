@@ -573,6 +573,134 @@
   gap: 6px;
 }
 
+/* Typography pass: keep dense Core UI readable on narrow mobile screens. */
+.theme-key-avio-landing .sub-status .current-tariff-line {
+  overflow: visible;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-overflow: clip;
+  white-space: normal;
+}
+.theme-key-avio-landing .premium-summary-copy {
+  min-width: 0;
+  overflow: visible;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-overflow: clip;
+  white-space: normal;
+}
+.theme-key-avio-landing .traffic-summary-right {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.theme-key-avio-landing .support-status-tabs-trigger {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.theme-key-avio-landing .support-status-tabs-trigger > span {
+  line-height: inherit;
+}
+.theme-key-avio-landing .support-field > span {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.theme-key-avio-landing .support-field > small {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+.theme-key-avio-landing .support-select-trigger {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.theme-key-avio-landing .support-ticket-screen .screen-head small {
+  font-weight: 500;
+}
+.theme-key-avio-landing .ticket-detail-title small {
+  font-weight: 500;
+}
+.theme-key-avio-landing .settings-row strong {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.theme-key-avio-landing .settings-row small {
+  overflow: visible;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  text-overflow: clip;
+  white-space: normal;
+}
+.theme-key-avio-landing .emoji-flag {
+  line-height: 1.25;
+}
+.theme-key-avio-landing .device-card-head strong {
+  font-weight: 600;
+}
+.theme-key-avio-landing .device-card-head .device-client-label {
+  font-weight: 500;
+}
+.theme-key-avio-landing .device-card-head small,
+.theme-key-avio-landing .device-meta span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.theme-key-avio-landing .device-meta strong {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.theme-key-avio-landing .gift-card-heading strong,
+.theme-key-avio-landing .referral-bonus-row strong {
+  font-weight: 600;
+}
+.theme-key-avio-landing .gift-status {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.theme-key-avio-landing .gift-details {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.theme-key-avio-landing .install-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.theme-key-avio-landing .payment-method-picker-label {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.theme-key-avio-landing .payment-method-select-trigger {
+  font-weight: 600;
+}
+.theme-key-avio-landing .balance-title-row strong {
+  font-weight: 600;
+}
+.theme-key-avio-landing .bottom-nav-label {
+  font-weight: 600;
+  line-height: 1.25;
+}
+.theme-key-avio-landing .auth-legal {
+  font-size: 12px;
+  line-height: 1.55;
+}
+.theme-key-avio-landing .auth-language-trigger,
+.theme-key-avio-landing .auth-language-trigger > span {
+  line-height: 1.35;
+}
+
 /* Current Core mirrors tokens onto html, including controls portalled to body. */
 html.theme-key-avio-landing :is(.app-toast, .language-select-content, .install-platform-content, .support-select-content, .field-error-tooltip) {
   background: var(--panel);
