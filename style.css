@@ -784,6 +784,46 @@
   font-size: 12px;
   line-height: 1.55;
 }
+.theme-key-avio-landing.app-shell:has(.auth-screen) {
+  background-color: var(--bg) !important;
+  background-image: linear-gradient(180deg, var(--avio-backdrop-top), var(--avio-backdrop-middle) 48%, var(--avio-backdrop-bottom)), url("images/avio-background-v2.png") !important;
+  background-position: center, center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+.theme-key-avio-landing .auth-screen {
+  background: transparent !important;
+}
+.theme-key-avio-landing .login-brand-auth {
+  gap: 0;
+}
+.theme-key-avio-landing .login-brand-auth h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.theme-key-avio-landing.app-shell .login-brand-auth .brand-mark.brand-mark-xl {
+  width: calc(186px * var(--home-logo-scale-effective, 1));
+  height: calc(114px * var(--home-logo-scale-effective, 1));
+  max-width: min(58vw, 210px);
+  max-height: 129px;
+  background: url("images/avio-logo.png") center / contain no-repeat;
+}
+.theme-key-avio-landing .login-brand-auth .brand-mark img,
+.theme-key-avio-landing .login-brand-auth .brand-mark-spinner {
+  opacity: 0 !important;
+}
+.theme-key-avio-landing .auth-card {
+  background: color-mix(in srgb, var(--panel) calc(var(--theme-transparency, 1) * 92%), transparent);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+}
 .theme-key-avio-landing .auth-language-trigger,
 .theme-key-avio-landing .auth-language-trigger > span {
   line-height: 1.35;
