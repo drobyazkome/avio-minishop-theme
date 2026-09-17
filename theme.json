@@ -9,7 +9,7 @@
   "use_primary_accent": false,
   "use_in_admin": false,
   "css_file": "style.css",
-  "assets_version": 32,
+  "assets_version": 33,
   "active_variant": "light",
   "tokens": {
     "style_preset": "none",

@@ -813,11 +813,9 @@
   height: calc(114px * var(--home-logo-scale-effective, 1));
   max-width: min(58vw, 210px);
   max-height: 129px;
-  background: url("images/avio-logo.png") center / contain no-repeat;
 }
-.theme-key-avio-landing .login-brand-auth .brand-mark img,
-.theme-key-avio-landing .login-brand-auth .brand-mark-spinner {
-  opacity: 0 !important;
+.theme-key-avio-landing .login-brand-auth .brand-mark img {
+  clip-path: none;
 }
 .theme-key-avio-landing .auth-card {
   background: color-mix(in srgb, var(--panel) calc(var(--theme-transparency, 1) * 92%), transparent);
