@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "version": "1.5.15",
+  "version": "1.6.0",
   "description": {
-    "ru": "Avio с панорамным лавандовым фоном, крупным логотипом, мягкими карточками и локальными шрифтами Onest и Rubik. Светлый и тёмный режимы.",
-    "en": "Avio with a panoramic lavender background, large wordmark, soft cards and bundled Onest and Rubik fonts. Light and dark modes."
+    "ru": "Avio Next: панорамный лавандовый фон, крупный логотип, мягкие карточки. Светлый и тёмный режимы с адаптированными акцентами, без зацикленных анимаций, лёгкие WebP и WOFF2.",
+    "en": "Avio Next: panoramic lavender background, large wordmark, soft cards. Light and dark modes with adapted accents, no looping animation, lightweight WebP and WOFF2 assets."
   },
   "author": {
     "name": "Avio"
   },
   "license": "LicenseRef-Avio-Private",
   "homepage": "https://github.com/drobyazkome/avio-minishop-theme",
-  "preview": "preview.png",
+  "preview": "preview.webp",
   "compatibility": {
     "theme_api": 1
   }

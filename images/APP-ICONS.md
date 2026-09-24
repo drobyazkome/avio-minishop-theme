@@ -3,7 +3,8 @@ App icons downloaded from Apple's public iTunes Lookup API on 2026-09-15.
 - incy: https://apps.apple.com/us/app/incy/id6756943388
 - Happ: https://apps.apple.com/us/app/happ-proxy-utility/id6504287215
 
-Unmodified store artwork used to identify the respective applications. Trademarks
+Store artwork is used only to identify the respective applications. Version 1.6.0
+keeps the same artwork, resized to 144 px and converted to WebP (`app-*.webp`). Trademarks
 and artwork belong to their respective owners; the Avio license does not apply.
 CSS identifies the existing SVG geometry; an unknown icon keeps a contrasting
 background instead of being replaced according to its position in the list.
