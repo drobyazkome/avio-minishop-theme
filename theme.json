@@ -1,8 +1,8 @@
 {
-  "key": "avio-next",
+  "key": "avio-flow",
   "names": {
-    "ru": "Avio Next — Твой интернет",
-    "en": "Avio Next — Your internet"
+    "ru": "Avio Flow — Твой интернет",
+    "en": "Avio Flow — Your internet"
   },
   "enabled": true,
   "default": false,

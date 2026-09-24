@@ -1,4 +1,4 @@
-/* Avio Next — minishop theme. All assets are local to this installable package. */
+/* Avio Flow — minishop theme. All assets are local to this installable package. */
 
 /* ── 1. Fonts ─────────────────────────────────────────────────────────────── */
 /* Onest and Rubik are subset to Latin + Cyrillic WOFF2 with the full weight axis. */
@@ -21,7 +21,7 @@
    Every colour that is not a Core token lives here, with a dark counterpart:
    peach = inactive subscription, good = best-value period and healthy servers,
    gold = featured tariff, admin = administrator entry points. */
-.theme-key-avio-next {
+.theme-key-avio-flow {
   --avio-backdrop-top: rgb(247 245 252 / .08);
   --avio-backdrop-middle: rgb(247 245 252 / .18);
   --avio-backdrop-bottom: rgb(247 245 252 / .75);
@@ -47,7 +47,7 @@
   --avio-admin-muted: #536b4c;
   --avio-highlight: rgb(255 255 255 / .72);
 }
-.theme-key-avio-next.theme-variant-dark {
+.theme-key-avio-flow.theme-variant-dark {
   --avio-backdrop-top: rgb(32 26 44 / .66);
   --avio-backdrop-middle: rgb(32 26 44 / .72);
   --avio-backdrop-bottom: rgb(32 26 44 / .94);
@@ -75,14 +75,14 @@
 }
 
 /* ── 3. Shell and panoramic background ───────────────────────────────────── */
-.theme-key-avio-next.app-shell {
+.theme-key-avio-flow.app-shell {
   background: radial-gradient(ellipse at 58% 10%, var(--panel-2), transparent 55%), var(--bg);
   color: var(--text);
   font-family: var(--font-ui);
 }
 /* Core resets the shell background with !important in its layout layer. */
-.theme-key-avio-next.app-shell:has(.bottom-nav),
-.theme-key-avio-next.app-shell:has(.auth-screen) {
+.theme-key-avio-flow.app-shell:has(.bottom-nav),
+.theme-key-avio-flow.app-shell:has(.auth-screen) {
   background-color: var(--bg) !important;
   background-image: linear-gradient(180deg, var(--avio-backdrop-top), var(--avio-backdrop-middle) 48%, var(--avio-backdrop-bottom)), url("images/avio-background.webp") !important;
   background-position: center, center !important;
@@ -90,32 +90,32 @@
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
 }
-.theme-key-avio-next.app-shell:has(.bottom-nav) .phone-screen,
-.theme-key-avio-next .auth-screen {
+.theme-key-avio-flow.app-shell:has(.bottom-nav) .phone-screen,
+.theme-key-avio-flow .auth-screen {
   background: transparent !important;
 }
-.theme-key-avio-next :is(h1, h2, h3) {
+.theme-key-avio-flow :is(h1, h2, h3) {
   font-family: var(--font-logo);
   font-weight: 500;
   letter-spacing: -.02em;
 }
 
 /* ── 4. Brand mark ───────────────────────────────────────────────────────── */
-.theme-key-avio-next .home-brand {
+.theme-key-avio-flow .home-brand {
   gap: 0;
   padding-block: 24px;
 }
-.theme-key-avio-next .home-layout > .home-brand {
+.theme-key-avio-flow .home-layout > .home-brand {
   align-self: start;
 }
-.theme-key-avio-next .home-brand::after {
+.theme-key-avio-flow .home-brand::after {
   content: none;
 }
 /* Keep page headings available to assistive technology without duplicating the wordmark. */
-.theme-key-avio-next .home-brand h1,
-.theme-key-avio-next .app-header .brand-row > strong,
-.theme-key-avio-next .rail-brand > strong,
-.theme-key-avio-next .login-brand-auth h1 {
+.theme-key-avio-flow .home-brand h1,
+.theme-key-avio-flow .app-header .brand-row > strong,
+.theme-key-avio-flow .rail-brand > strong,
+.theme-key-avio-flow .login-brand-auth h1 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -125,32 +125,32 @@
   clip-path: inset(50%);
   white-space: nowrap;
 }
-.theme-key-avio-next :is(.app-header .brand-row, .rail-brand),
-.theme-key-avio-next .login-brand-auth {
+.theme-key-avio-flow :is(.app-header .brand-row, .rail-brand),
+.theme-key-avio-flow .login-brand-auth {
   gap: 0;
 }
-.theme-key-avio-next.app-shell :is(.app-header .brand-row, .rail-brand) .brand-mark {
+.theme-key-avio-flow.app-shell :is(.app-header .brand-row, .rail-brand) .brand-mark {
   width: 62.4px;
   height: 39.6px;
 }
-.theme-key-avio-next .brand-mark img {
+.theme-key-avio-flow .brand-mark img {
   /* The bundled Avio artwork has a separate VPN badge in its bottom quarter. */
   height: auto;
   clip-path: inset(0 0 25% 0);
   filter: brightness(0) saturate(100%) invert(30%) sepia(24%) saturate(1311%) hue-rotate(220deg) brightness(96%) contrast(89%);
 }
-.theme-key-avio-next.theme-dark .brand-mark img {
+.theme-key-avio-flow.theme-dark .brand-mark img {
   filter: brightness(0) saturate(100%) invert(80%) sepia(19%) saturate(720%) hue-rotate(218deg) brightness(101%) contrast(86%);
 }
-.theme-key-avio-next :is(.home-brand, .login-brand-auth) .brand-mark img {
+.theme-key-avio-flow :is(.home-brand, .login-brand-auth) .brand-mark img {
   clip-path: none;
 }
-.theme-key-avio-next.app-shell .home-brand .brand-mark.brand-mark-xl {
+.theme-key-avio-flow.app-shell .home-brand .brand-mark.brand-mark-xl {
   width: calc(clamp(225px, 27vw, 285px) * var(--home-logo-scale-effective, 1));
   height: calc(clamp(142.5px, 18vw, 180px) * var(--home-logo-scale-effective, 1));
   max-width: 100%;
 }
-.theme-key-avio-next.app-shell .login-brand-auth .brand-mark.brand-mark-xl {
+.theme-key-avio-flow.app-shell .login-brand-auth .brand-mark.brand-mark-xl {
   width: calc(186px * var(--home-logo-scale-effective, 1));
   height: calc(114px * var(--home-logo-scale-effective, 1));
   max-width: min(58vw, 210px);
@@ -158,16 +158,16 @@
 }
 
 /* ── 5. Surfaces ─────────────────────────────────────────────────────────── */
-.theme-key-avio-next :is(.card, .status-card, .period-card, .method-card, .option-row, .dialog-card, .home-compact-summary, .home-balance-card) {
+.theme-key-avio-flow :is(.card, .status-card, .period-card, .method-card, .option-row, .dialog-card, .home-compact-summary, .home-balance-card) {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: color-mix(in srgb, var(--panel) calc(var(--theme-transparency, 1) * 100%), transparent);
   box-shadow: none;
 }
-.theme-key-avio-next :is(.home-compact-summary, .home-balance-card) {
+.theme-key-avio-flow :is(.home-compact-summary, .home-balance-card) {
   background: linear-gradient(120deg, var(--panel-2), var(--panel));
 }
-.theme-key-avio-next .home-bottom {
+.theme-key-avio-flow .home-bottom {
   border-radius: 28px;
   padding: 18px;
   background: color-mix(in srgb, var(--panel) calc(var(--theme-transparency, 1) * 88%), transparent);
@@ -176,111 +176,111 @@
   backdrop-filter: blur(16px);
 }
 /* One quiet surface for the home summary; traffic is separated by rules. */
-.theme-key-avio-next .home-bottom :is(.status-card, .traffic-card-compact) {
+.theme-key-avio-flow .home-bottom :is(.status-card, .traffic-card-compact) {
   background: transparent;
   border: 0;
   border-radius: 0;
   box-shadow: none;
   padding: 12px 0;
 }
-.theme-key-avio-next .home-bottom .traffic-card-compact {
+.theme-key-avio-flow .home-bottom .traffic-card-compact {
   border-top: 1px solid var(--border);
 }
-.theme-key-avio-next .home-bottom .status-card h2 {
+.theme-key-avio-flow .home-bottom .status-card h2 {
   color: var(--text);
   font-weight: 600;
 }
-.theme-key-avio-next :is(.settings-row, .option-row) {
+.theme-key-avio-flow :is(.settings-row, .option-row) {
   border-radius: 18px;
 }
-.theme-key-avio-next .auth-card {
+.theme-key-avio-flow .auth-card {
   background: color-mix(in srgb, var(--panel) calc(var(--theme-transparency, 1) * 92%), transparent);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(16px);
 }
 
 /* ── 6. Controls ─────────────────────────────────────────────────────────── */
-.theme-key-avio-next .btn {
+.theme-key-avio-flow .btn {
   border-radius: 16px;
   min-height: 44px;
   font-weight: 500;
   box-shadow: none;
 }
-.theme-key-avio-next :is(.btn, .settings-row, .bottom-nav button) {
+.theme-key-avio-flow :is(.btn, .settings-row, .bottom-nav button) {
   transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
-.theme-key-avio-next :is(.btn, .settings-row, .bottom-nav button):active:not(:disabled) {
+.theme-key-avio-flow :is(.btn, .settings-row, .bottom-nav button):active:not(:disabled) {
   transform: translateY(1px);
 }
-.theme-key-avio-next :is(.btn, .period-card, .install-app-button, .support-status-tabs-trigger, .bottom-nav button):active:not(:disabled) {
+.theme-key-avio-flow :is(.btn, .period-card, .install-app-button, .support-status-tabs-trigger, .bottom-nav button):active:not(:disabled) {
   transform: translateY(1px) scale(.985);
 }
-.theme-key-avio-next .btn-primary {
+.theme-key-avio-flow .btn-primary {
   background: var(--accent);
   color: var(--accent-contrast);
   border: 1px solid transparent;
 }
-.theme-key-avio-next .btn-primary:hover:not(:disabled) {
+.theme-key-avio-flow .btn-primary:hover:not(:disabled) {
   background: color-mix(in srgb, var(--accent) 88%, var(--text));
   box-shadow: 0 5px 16px color-mix(in srgb, var(--accent) 14%, transparent);
 }
-.theme-key-avio-next :is(.btn-secondary, .btn-outline) {
+.theme-key-avio-flow :is(.btn-secondary, .btn-outline) {
   background: var(--panel-2);
   color: var(--text);
   border: 1px solid var(--border);
 }
-.theme-key-avio-next :is(.btn-ghost, .btn-icon) {
+.theme-key-avio-flow :is(.btn-ghost, .btn-icon) {
   color: var(--text);
 }
-.theme-key-avio-next :is(button, a, input, select, textarea, [tabindex]):focus-visible {
+.theme-key-avio-flow :is(button, a, input, select, textarea, [tabindex]):focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
-.theme-key-avio-next :is(button, input, select, textarea):disabled {
+.theme-key-avio-flow :is(button, input, select, textarea):disabled {
   cursor: not-allowed;
   opacity: .55;
 }
 /* Fields sit on the card colour with a stronger rule, so they never read as secondary buttons. */
-.theme-key-avio-next :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), textarea) {
+.theme-key-avio-flow :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), textarea) {
   border: 1px solid color-mix(in srgb, var(--border-strong) 70%, var(--border));
   border-radius: 14px;
   background: var(--panel);
   font-family: var(--font-ui);
 }
-.theme-key-avio-next :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), textarea):focus {
+.theme-key-avio-flow :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), textarea):focus {
   border-color: var(--accent);
 }
-.theme-key-avio-next :is(.period-card, .method-card).active {
+.theme-key-avio-flow :is(.period-card, .method-card).active {
   border-color: var(--accent);
   background: var(--panel-2);
   box-shadow: inset 0 0 0 1px var(--accent);
 }
 
 /* ── 7. Navigation ───────────────────────────────────────────────────────── */
-.theme-key-avio-next .bottom-nav {
+.theme-key-avio-flow .bottom-nav {
   background: color-mix(in srgb, var(--nav-bg) 90%, transparent);
   border-color: var(--border);
   border-radius: 24px;
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(16px);
 }
-.theme-key-avio-next .bottom-nav button {
+.theme-key-avio-flow .bottom-nav button {
   color: var(--muted);
   border-radius: 16px;
 }
-.theme-key-avio-next .bottom-nav button.active {
+.theme-key-avio-flow .bottom-nav button.active {
   color: var(--accent);
   background: var(--panel-2);
   box-shadow: none;
   transform: none;
 }
-.theme-key-avio-next .bottom-nav-label {
+.theme-key-avio-flow .bottom-nav-label {
   font-weight: 600;
   line-height: 1.25;
 }
 
 /* ── 8. Home: status, CTAs, inactive state ───────────────────────────────── */
-.theme-key-avio-next .sub-status .current-tariff-line {
+.theme-key-avio-flow .sub-status .current-tariff-line {
   overflow: visible;
   font-size: 13px;
   font-weight: 600;
@@ -288,7 +288,7 @@
   text-overflow: clip;
   white-space: normal;
 }
-.theme-key-avio-next .premium-summary-copy {
+.theme-key-avio-flow .premium-summary-copy {
   min-width: 0;
   overflow: visible;
   font-size: 12px;
@@ -297,38 +297,38 @@
   text-overflow: clip;
   white-space: normal;
 }
-.theme-key-avio-next .traffic-summary-right {
+.theme-key-avio-flow .traffic-summary-right {
   font-size: 12px;
   font-weight: 600;
   line-height: 1.4;
 }
 /* No subscription is an invitation, not an error: warm peach instead of alarm red. */
-.theme-key-avio-next .home-bottom .status-card-inactive,
-.theme-key-avio-next .devices-inactive-card {
+.theme-key-avio-flow .home-bottom .status-card-inactive,
+.theme-key-avio-flow .devices-inactive-card {
   border: 1px solid var(--avio-peach-border);
   background: linear-gradient(135deg, var(--avio-peach), var(--avio-peach-soft));
   box-shadow: inset 0 1px 0 var(--avio-highlight);
   color: var(--avio-peach-ink);
 }
-.theme-key-avio-next .home-bottom .status-card-inactive {
+.theme-key-avio-flow .home-bottom .status-card-inactive {
   padding: 10px 12px;
   border-radius: 18px;
 }
-.theme-key-avio-next .home-bottom .status-card-inactive h2,
-.theme-key-avio-next .devices-inactive-card > span {
+.theme-key-avio-flow .home-bottom .status-card-inactive h2,
+.theme-key-avio-flow .devices-inactive-card > span {
   color: var(--avio-peach-ink);
   font-size: 16px;
   font-weight: 650;
 }
-.theme-key-avio-next .sub-status-inactive {
+.theme-key-avio-flow .sub-status-inactive {
   color: var(--avio-peach-ink);
 }
-.theme-key-avio-next .sub-status-inactive > svg,
-.theme-key-avio-next .devices-inactive-card > svg {
+.theme-key-avio-flow .sub-status-inactive > svg,
+.theme-key-avio-flow .devices-inactive-card > svg {
   display: none;
 }
-.theme-key-avio-next .sub-status-inactive::before,
-.theme-key-avio-next .devices-inactive-card::before {
+.theme-key-avio-flow .sub-status-inactive::before,
+.theme-key-avio-flow .devices-inactive-card::before {
   content: "";
   display: block;
   width: 30px;
@@ -338,26 +338,26 @@
   -webkit-mask: url("icons/lock-open.svg") center / contain no-repeat;
   mask: url("icons/lock-open.svg") center / contain no-repeat;
 }
-.theme-key-avio-next .devices-inactive-card::before {
+.theme-key-avio-flow .devices-inactive-card::before {
   width: 34px;
   height: 34px;
 }
 /* Home action icons: the first action is "Install", the payment action carries data-webapp-action. */
-.theme-key-avio-next .action-stack > .btn:first-child:not([data-webapp-action]),
-.theme-key-avio-next .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"],
-.theme-key-avio-next .subscription-renew-action {
+.theme-key-avio-flow .action-stack > .btn:first-child:not([data-webapp-action]),
+.theme-key-avio-flow .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"],
+.theme-key-avio-flow .subscription-renew-action {
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
-.theme-key-avio-next .action-stack > .btn:first-child:not([data-webapp-action]) > svg,
-.theme-key-avio-next .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"] > svg,
-.theme-key-avio-next .subscription-renew-action > svg {
+.theme-key-avio-flow .action-stack > .btn:first-child:not([data-webapp-action]) > svg,
+.theme-key-avio-flow .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"] > svg,
+.theme-key-avio-flow .subscription-renew-action > svg {
   display: none;
 }
-.theme-key-avio-next .action-stack > .btn:first-child:not([data-webapp-action])::before,
-.theme-key-avio-next .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"]::before,
-.theme-key-avio-next .subscription-renew-action::before {
+.theme-key-avio-flow .action-stack > .btn:first-child:not([data-webapp-action])::before,
+.theme-key-avio-flow .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"]::before,
+.theme-key-avio-flow .subscription-renew-action::before {
   content: "";
   display: inline-grid;
   width: 24px;
@@ -369,15 +369,15 @@
   font-weight: 650;
   line-height: 1;
 }
-.theme-key-avio-next .action-stack > .btn:first-child:not([data-webapp-action])::before {
+.theme-key-avio-flow .action-stack > .btn:first-child:not([data-webapp-action])::before {
   border: 1.5px solid color-mix(in srgb, currentColor 78%, transparent);
   background:
     linear-gradient(currentColor, currentColor) center / 10px 1.5px no-repeat,
     linear-gradient(currentColor, currentColor) center / 1.5px 10px no-repeat;
 }
 /* Icon in a tinted disc, both drawn in the button's text colour. */
-.theme-key-avio-next .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"]::before,
-.theme-key-avio-next .payment-submit-button::before {
+.theme-key-avio-flow .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"]::before,
+.theme-key-avio-flow .payment-submit-button::before {
   background: currentColor;
   -webkit-mask:
     url("icons/arrow-right.svg") center / 15px 15px no-repeat,
@@ -386,7 +386,7 @@
     url("icons/arrow-right.svg") center / 15px 15px no-repeat,
     radial-gradient(circle closest-side, rgb(0 0 0 / .18) 99%, transparent 100%);
 }
-.theme-key-avio-next .subscription-renew-action::before {
+.theme-key-avio-flow .subscription-renew-action::before {
   background: currentColor;
   -webkit-mask:
     url("icons/rotate-cw.svg") center / 15px 15px no-repeat,
@@ -395,25 +395,25 @@
     url("icons/rotate-cw.svg") center / 15px 15px no-repeat,
     radial-gradient(circle closest-side, rgb(0 0 0 / .12) 99%, transparent 100%);
 }
-.theme-key-avio-next .action-stack > .btn:first-child:not([data-webapp-action]),
-.theme-key-avio-next .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"] {
+.theme-key-avio-flow .action-stack > .btn:first-child:not([data-webapp-action]),
+.theme-key-avio-flow .home-bottom:has(.status-card-inactive) [data-webapp-action="open-payment"] {
   box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 25%, transparent);
 }
 /* Renewal is secondary while the subscription is healthy... */
-.theme-key-avio-next .subscription-renew-action {
+.theme-key-avio-flow .subscription-renew-action {
   border: 1px solid var(--border);
   background: var(--panel-2);
   color: var(--text);
   box-shadow: none;
 }
 /* ...and becomes the main action once Core marks the subscription as expiring. */
-.theme-key-avio-next .home-bottom:has(.status-card-warning) .subscription-renew-action {
+.theme-key-avio-flow .home-bottom:has(.status-card-warning) .subscription-renew-action {
   border-color: transparent;
   background: var(--accent);
   color: var(--accent-contrast);
   box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 25%, transparent);
 }
-.theme-key-avio-next .home-bottom:has(.status-card-warning) .action-stack > .btn:first-child:not([data-webapp-action]) {
+.theme-key-avio-flow .home-bottom:has(.status-card-warning) .action-stack > .btn:first-child:not([data-webapp-action]) {
   border: 1px solid var(--border);
   background: var(--panel-2);
   color: var(--text);
@@ -421,7 +421,7 @@
 }
 
 /* ── 9. Settings ─────────────────────────────────────────────────────────── */
-.theme-key-avio-next .settings-row.settings-row-admin {
+.theme-key-avio-flow .settings-row.settings-row-admin {
   --warning: var(--avio-admin-accent);
   --warning-text: var(--avio-admin-ink);
   --warning-border: var(--avio-admin-border);
@@ -430,16 +430,16 @@
   border-color: var(--warning-border);
   color: var(--warning-text);
 }
-.theme-key-avio-next .settings-row.settings-row-admin:hover:not(:disabled) {
+.theme-key-avio-flow .settings-row.settings-row-admin:hover:not(:disabled) {
   background: var(--avio-admin-hover);
   border-color: var(--avio-admin-border-hover);
 }
-.theme-key-avio-next .settings-row strong {
+.theme-key-avio-flow .settings-row strong {
   font-size: 13px;
   font-weight: 600;
   line-height: 1.35;
 }
-.theme-key-avio-next .settings-row small {
+.theme-key-avio-flow .settings-row small {
   overflow: visible;
   font-size: 12px;
   font-weight: 400;
@@ -448,52 +448,52 @@
   text-overflow: clip;
   white-space: normal;
 }
-.theme-key-avio-next .emoji-flag {
+.theme-key-avio-flow .emoji-flag {
   line-height: 1.25;
 }
 /* Core draws the same shield for admin, security and privacy; keep it for admin only. */
-.theme-key-avio-next :is(.settings-row-security, .settings-row-policy) > svg.lucide-shield {
+.theme-key-avio-flow :is(.settings-row-security, .settings-row-policy) > svg.lucide-shield {
   background: currentColor;
   -webkit-mask: url("icons/key-round.svg") center / contain no-repeat;
   mask: url("icons/key-round.svg") center / contain no-repeat;
 }
-.theme-key-avio-next .settings-row-policy > svg.lucide-shield {
+.theme-key-avio-flow .settings-row-policy > svg.lucide-shield {
   -webkit-mask-image: url("icons/file-lock.svg");
   mask-image: url("icons/file-lock.svg");
 }
-.theme-key-avio-next :is(.settings-row-security, .settings-row-policy) > svg.lucide-shield > * {
+.theme-key-avio-flow :is(.settings-row-security, .settings-row-policy) > svg.lucide-shield > * {
   display: none;
 }
 /* Group spacing stays; the hairlines read as stray marks over the panorama. */
-.theme-key-avio-next .settings-divider {
+.theme-key-avio-flow .settings-divider {
   background: transparent;
 }
 /* Legal documents are reference links, quieter than real settings. */
-.theme-key-avio-next .settings-row.settings-row-policy {
+.theme-key-avio-flow .settings-row.settings-row-policy {
   background: color-mix(in srgb, var(--panel) calc(var(--theme-transparency, 1) * 78%), transparent);
 }
-.theme-key-avio-next .settings-row-policy strong {
+.theme-key-avio-flow .settings-row-policy strong {
   font-weight: 500;
 }
 
 /* ── 10. Install guide ───────────────────────────────────────────────────── */
-.theme-key-avio-next :is(.install-platform-trigger, .install-apps button, .install-step, .install-subscription-card) {
+.theme-key-avio-flow :is(.install-platform-trigger, .install-apps button, .install-step, .install-subscription-card) {
   background: var(--panel);
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: 20px;
   box-shadow: none;
 }
-.theme-key-avio-next .install-platform-trigger {
+.theme-key-avio-flow .install-platform-trigger {
   min-height: 48px;
   border-radius: 24px;
 }
-.theme-key-avio-next .install-section-title {
+.theme-key-avio-flow .install-section-title {
   font-size: 13px;
   font-weight: 600;
   line-height: 1.4;
 }
-.theme-key-avio-next .install-apps button {
+.theme-key-avio-flow .install-apps button {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -505,7 +505,7 @@
   text-align: center;
   font-weight: 600;
 }
-.theme-key-avio-next .install-apps button.active {
+.theme-key-avio-flow .install-apps button.active {
   background: var(--panel-2);
   border-color: var(--accent);
   color: var(--accent);
@@ -513,20 +513,20 @@
 }
 /* Phones: three compact tiles per row (Core's own 6-track grid), so step 1 reaches the first screen. */
 @media (min-width: 360px) and (max-width: 519px) {
-  .theme-key-avio-next .install-apps {
+  .theme-key-avio-flow .install-apps {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-  .theme-key-avio-next .install-apps button,
-  .theme-key-avio-next .install-apps.apps-mobile-remainder-one button:last-child {
+  .theme-key-avio-flow .install-apps button,
+  .theme-key-avio-flow .install-apps.apps-mobile-remainder-one button:last-child {
     grid-column: span 2;
   }
-  .theme-key-avio-next .install-apps.apps-remainder-one button:last-child {
+  .theme-key-avio-flow .install-apps.apps-remainder-one button:last-child {
     grid-column: 1 / -1;
   }
-  .theme-key-avio-next .install-apps.apps-remainder-two button:nth-last-child(-n + 2) {
+  .theme-key-avio-flow .install-apps.apps-remainder-two button:nth-last-child(-n + 2) {
     grid-column: span 3;
   }
-  .theme-key-avio-next .install-apps button {
+  .theme-key-avio-flow .install-apps button {
     min-height: 84px;
     padding: 12px 6px;
     gap: 8px;
@@ -534,34 +534,34 @@
     line-height: 1.2;
     overflow-wrap: anywhere;
   }
-  .theme-key-avio-next .install-apps .install-svg {
+  .theme-key-avio-flow .install-apps .install-svg {
     width: 40px;
     height: 40px;
     flex-basis: 40px;
     border-radius: 10px;
   }
 }
-.theme-key-avio-next :is(.install-topbar p, .install-step-body p, .install-subscription-heading p) {
+.theme-key-avio-flow :is(.install-topbar p, .install-step-body p, .install-subscription-heading p) {
   color: var(--muted);
   line-height: 1.7;
 }
-.theme-key-avio-next :is(.install-step-icon, .install-subscription-header-icon) {
+.theme-key-avio-flow :is(.install-step-icon, .install-subscription-header-icon) {
   background: var(--panel-2);
   color: var(--accent);
   border-radius: 16px;
 }
-.theme-key-avio-next .install-qr-wrap {
+.theme-key-avio-flow .install-qr-wrap {
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 16px;
 }
-.theme-key-avio-next .install-qr-wrap img {
+.theme-key-avio-flow .install-qr-wrap img {
   filter: none;
   mix-blend-mode: normal;
 }
 /* App icons: match the native SVG identity, never the app's position. */
-.theme-key-avio-next .install-apps .install-svg {
+.theme-key-avio-flow .install-apps .install-svg {
   width: 48px;
   height: 48px;
   flex: 0 0 48px;
@@ -571,45 +571,45 @@
   place-items: center;
   overflow: hidden;
 }
-.theme-key-avio-next .install-apps .install-svg:has(path[d^="M22.3264 3H12.3611"]) {
+.theme-key-avio-flow .install-apps .install-svg:has(path[d^="M22.3264 3H12.3611"]) {
   background: url("images/app-happ.webp") center / cover;
 }
-.theme-key-avio-next .install-apps .install-svg:has(path[d^="M5.828 31V19.8"]) {
+.theme-key-avio-flow .install-apps .install-svg:has(path[d^="M5.828 31V19.8"]) {
   background: url("images/app-incy.webp") center / cover;
 }
-.theme-key-avio-next .install-apps .install-svg:has(path[d^="M38.1165 40.751"]) {
+.theme-key-avio-flow .install-apps .install-svg:has(path[d^="M38.1165 40.751"]) {
   background: url("images/app-flclashx.webp") center / cover;
 }
-.theme-key-avio-next .install-apps .install-svg:has(path[d^="M11.2 23.031"]) {
+.theme-key-avio-flow .install-apps .install-svg:has(path[d^="M11.2 23.031"]) {
   background: url("images/app-koala.webp") center / cover;
 }
-.theme-key-avio-next .install-apps .install-svg:has(path[d="M12 16h26M12 25h17M12 34h10"]) {
+.theme-key-avio-flow .install-apps .install-svg:has(path[d="M12 16h26M12 25h17M12 34h10"]) {
   background: url("images/app-flowvy.webp") center / cover;
 }
-.theme-key-avio-next .install-apps .install-svg:has(path[d="M11.5 20h27M11.5 30h27"]) {
+.theme-key-avio-flow .install-apps .install-svg:has(path[d="M11.5 20h27M11.5 30h27"]) {
   background: url("images/app-anywhere.webp") center / cover;
 }
-.theme-key-avio-next .install-apps .install-svg:has(path[d^="M20.1587 31.9985"]) {
+.theme-key-avio-flow .install-apps .install-svg:has(path[d^="M20.1587 31.9985"]) {
   background: url("images/app-karing.webp") center / cover;
 }
-.theme-key-avio-next .install-apps .install-svg:has(path[d^="M22.3264 3H12.3611"], path[d^="M5.828 31V19.8"], path[d^="M38.1165 40.751"], path[d^="M11.2 23.031"], path[d="M12 16h26M12 25h17M12 34h10"], path[d="M11.5 20h27M11.5 30h27"], path[d^="M20.1587 31.9985"]) svg {
+.theme-key-avio-flow .install-apps .install-svg:has(path[d^="M22.3264 3H12.3611"], path[d^="M5.828 31V19.8"], path[d^="M38.1165 40.751"], path[d^="M11.2 23.031"], path[d="M12 16h26M12 25h17M12 34h10"], path[d="M11.5 20h27M11.5 30h27"], path[d^="M20.1587 31.9985"]) svg {
   visibility: hidden;
 }
-.theme-key-avio-next .install-steps {
+.theme-key-avio-flow .install-steps {
   counter-reset: avio-install-step;
   gap: 16px;
 }
-.theme-key-avio-next .install-step-motion {
+.theme-key-avio-flow .install-step-motion {
   counter-increment: avio-install-step;
 }
-.theme-key-avio-next .install-step {
+.theme-key-avio-flow .install-step {
   position: relative;
   grid-template-columns: 32px minmax(0, 1fr);
   align-items: start;
   padding: 18px;
   gap: 12px;
 }
-.theme-key-avio-next .install-steps .install-step-motion .install-step-icon {
+.theme-key-avio-flow .install-steps .install-step-motion .install-step-icon {
   width: 32px;
   height: 32px;
   border-radius: 10px;
@@ -617,32 +617,32 @@
   color: var(--accent-contrast);
   border: none;
 }
-.theme-key-avio-next .install-step-icon svg {
+.theme-key-avio-flow .install-step-icon svg {
   display: none;
 }
-.theme-key-avio-next .install-step-icon::before {
+.theme-key-avio-flow .install-step-icon::before {
   content: counter(avio-install-step);
   color: var(--accent-contrast);
   font: 600 16px var(--font-ui);
 }
-.theme-key-avio-next .install-step-body {
+.theme-key-avio-flow .install-step-body {
   gap: 12px;
 }
-.theme-key-avio-next .install-step-body h2 {
+.theme-key-avio-flow .install-step-body h2 {
   font-size: 18px;
   line-height: 1.3;
   letter-spacing: -.015em;
 }
-.theme-key-avio-next .install-step-body p {
+.theme-key-avio-flow .install-step-body p {
   font-size: 14px;
   line-height: 1.55;
   white-space: pre-line;
 }
-.theme-key-avio-next .install-actions {
+.theme-key-avio-flow .install-actions {
   flex-direction: column;
   gap: 10px;
 }
-.theme-key-avio-next .install-actions .btn {
+.theme-key-avio-flow .install-actions .btn {
   flex: 0 0 auto;
   width: 100%;
   min-height: 48px;
@@ -652,7 +652,7 @@
   line-height: 1.35;
   padding: 12px;
 }
-.theme-key-avio-next .install-step-motion:first-child .install-actions .btn ~ .btn {
+.theme-key-avio-flow .install-step-motion:first-child .install-actions .btn ~ .btn {
   background: var(--surface-subtle);
   color: var(--text);
   border: 1px solid var(--border);
@@ -660,35 +660,35 @@
 }
 
 /* ── 11. Checkout ────────────────────────────────────────────────────────── */
-.theme-key-avio-next .webapp-payment-dialog {
+.theme-key-avio-flow .webapp-payment-dialog {
   font-synthesis: none;
 }
-.theme-key-avio-next .webapp-payment-dialog .payment-dialog-body {
+.theme-key-avio-flow .webapp-payment-dialog .payment-dialog-body {
   gap: 6px;
 }
-.theme-key-avio-next .webapp-payment-dialog .tariff-step-caption {
+.theme-key-avio-flow .webapp-payment-dialog .tariff-step-caption {
   display: none !important;
 }
 /* Compact header: an empty title block collapses, the close button keeps its column. */
-.theme-key-avio-next .webapp-payment-dialog > .dialog-head-custom .dialog-close-button {
+.theme-key-avio-flow .webapp-payment-dialog > .dialog-head-custom .dialog-close-button {
   grid-column: 2;
   justify-self: end;
 }
-.theme-key-avio-next .webapp-payment-dialog > .dialog-head-custom:has(.dialog-title-block:empty) {
+.theme-key-avio-flow .webapp-payment-dialog > .dialog-head-custom:has(.dialog-title-block:empty) {
   min-height: 34px;
   align-items: center;
 }
-.theme-key-avio-next .webapp-payment-dialog > .dialog-head-custom:has(.dialog-title-block:empty) .dialog-title-block,
-.theme-key-avio-next .webapp-payment-dialog:has(.back-inline) > .dialog-head-custom .dialog-title-block {
+.theme-key-avio-flow .webapp-payment-dialog > .dialog-head-custom:has(.dialog-title-block:empty) .dialog-title-block,
+.theme-key-avio-flow .webapp-payment-dialog:has(.back-inline) > .dialog-head-custom .dialog-title-block {
   display: none;
 }
-.theme-key-avio-next .webapp-payment-dialog:has(> .dialog-head-custom .dialog-title-block:empty),
-.theme-key-avio-next .webapp-payment-dialog:has(.back-inline) {
+.theme-key-avio-flow .webapp-payment-dialog:has(> .dialog-head-custom .dialog-title-block:empty),
+.theme-key-avio-flow .webapp-payment-dialog:has(.back-inline) {
   gap: 6px;
   padding: 12px;
 }
-.theme-key-avio-next .webapp-payment-dialog:has(> .dialog-head-custom .dialog-title-block:empty) .dialog-close-button,
-.theme-key-avio-next .webapp-payment-dialog:has(.back-inline) .dialog-close-button {
+.theme-key-avio-flow .webapp-payment-dialog:has(> .dialog-head-custom .dialog-title-block:empty) .dialog-close-button,
+.theme-key-avio-flow .webapp-payment-dialog:has(.back-inline) .dialog-close-button {
   width: 34px;
   min-width: 34px;
   height: 34px;
@@ -696,14 +696,14 @@
   border-radius: 12px;
 }
 /* The back action sits in the flow beside the close button. */
-.theme-key-avio-next .webapp-payment-dialog:has(.back-inline) > .dialog-head-custom {
+.theme-key-avio-flow .webapp-payment-dialog:has(.back-inline) > .dialog-head-custom {
   position: relative;
   z-index: 12;
   min-height: 34px;
   align-items: center;
   background: color-mix(in srgb, var(--panel) 96%, var(--bg));
 }
-.theme-key-avio-next .webapp-payment-dialog:has(.back-inline) .back-inline {
+.theme-key-avio-flow .webapp-payment-dialog:has(.back-inline) .back-inline {
   position: absolute;
   z-index: 20;
   top: 18px;
@@ -722,20 +722,20 @@
   font-weight: 600;
 }
 @media (max-width: 360px) {
-  .theme-key-avio-next .webapp-payment-dialog:has(.back-inline) .back-inline {
+  .theme-key-avio-flow .webapp-payment-dialog:has(.back-inline) .back-inline {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 }
-.theme-key-avio-next .payment-dialog-body:has(> .back-inline) {
+.theme-key-avio-flow .payment-dialog-body:has(> .back-inline) {
   display: grid;
   grid-template-columns: 38px minmax(0, 1fr);
   align-items: center;
   column-gap: 8px;
 }
-.theme-key-avio-next .payment-dialog-body:has(> .back-inline) > .back-inline {
+.theme-key-avio-flow .payment-dialog-body:has(> .back-inline) > .back-inline {
   position: static !important;
   z-index: auto;
   grid-column: 1;
@@ -751,19 +751,19 @@
   font-size: 0;
   box-shadow: none;
 }
-.theme-key-avio-next .payment-dialog-body:has(> .back-inline) > .back-inline > svg {
+.theme-key-avio-flow .payment-dialog-body:has(> .back-inline) > .back-inline > svg {
   width: 18px;
   height: 18px;
 }
-.theme-key-avio-next .payment-dialog-body:has(> .back-inline) > .tariff-step-caption {
+.theme-key-avio-flow .payment-dialog-body:has(> .back-inline) > .tariff-step-caption {
   grid-column: 2;
   grid-row: 1;
   margin: 0;
 }
-.theme-key-avio-next .payment-dialog-body:has(> .back-inline) > :not(.back-inline):not(.tariff-step-caption) {
+.theme-key-avio-flow .payment-dialog-body:has(> .back-inline) > :not(.back-inline):not(.tariff-step-caption) {
   grid-column: 1 / -1;
 }
-.theme-key-avio-next .subscription-purchase-description-header {
+.theme-key-avio-flow .subscription-purchase-description-header {
   padding: 8px 10px;
   border: 0;
   border-left: 3px solid color-mix(in srgb, var(--accent) 72%, transparent);
@@ -771,14 +771,14 @@
   background: color-mix(in srgb, var(--panel-2) 58%, transparent);
   box-shadow: none;
 }
-.theme-key-avio-next .subscription-purchase-description-header p {
+.theme-key-avio-flow .subscription-purchase-description-header p {
   color: var(--muted);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0;
 }
-.theme-key-avio-next .tariff-step-caption {
+.theme-key-avio-flow .tariff-step-caption {
   color: var(--text);
   font-size: 13px;
   font-weight: 500;
@@ -786,14 +786,14 @@
 }
 
 /* Tariff summary card: gradient head, two facts above and the premium allowance below. */
-.theme-key-avio-next .checkout-tariff-card {
+.theme-key-avio-flow .checkout-tariff-card {
   overflow: hidden;
   border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
   border-radius: 16px;
   background: color-mix(in srgb, var(--panel) 94%, transparent);
   box-shadow: none;
 }
-.theme-key-avio-next .checkout-tariff-card-head {
+.theme-key-avio-flow .checkout-tariff-card-head {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: flex-start;
@@ -802,10 +802,10 @@
   background: linear-gradient(125deg, #62469f, #8a70bf);
   color: #fff;
 }
-.theme-key-avio-next .checkout-tariff-title-line {
+.theme-key-avio-flow .checkout-tariff-title-line {
   display: contents;
 }
-.theme-key-avio-next .checkout-tariff-title-line > strong {
+.theme-key-avio-flow .checkout-tariff-title-line > strong {
   flex: 0 1 auto;
   grid-column: 1;
   grid-row: 1;
@@ -818,18 +818,18 @@
   line-height: 1.2;
   letter-spacing: -.025em;
 }
-.theme-key-avio-next .checkout-tariff-description-line,
-.theme-key-avio-next .checkout-tariff-title-line.is-wrapped .checkout-tariff-description-line {
+.theme-key-avio-flow .checkout-tariff-description-line,
+.theme-key-avio-flow .checkout-tariff-title-line.is-wrapped .checkout-tariff-description-line {
   flex-basis: 100%;
   grid-column: 1 / -1;
   grid-row: 2;
   gap: 0;
   margin-top: 1px;
 }
-.theme-key-avio-next .checkout-tariff-title-separator {
+.theme-key-avio-flow .checkout-tariff-title-separator {
   display: none;
 }
-.theme-key-avio-next .checkout-tariff-description-line > small {
+.theme-key-avio-flow .checkout-tariff-description-line > small {
   display: block;
   overflow: visible;
   color: #f5f0ff;
@@ -843,7 +843,7 @@
   -webkit-line-clamp: unset;
 }
 /* The visible label repeats the button's localized title, so it follows the user's language. */
-.theme-key-avio-next .checkout-tariff-edit {
+.theme-key-avio-flow .checkout-tariff-edit {
   display: inline-flex;
   grid-column: 2;
   grid-row: 1;
@@ -868,16 +868,16 @@
   text-align: left;
   white-space: normal;
 }
-.theme-key-avio-next .checkout-tariff-edit > svg {
+.theme-key-avio-flow .checkout-tariff-edit > svg {
   flex: 0 0 auto;
 }
-.theme-key-avio-next .checkout-tariff-edit::after {
+.theme-key-avio-flow .checkout-tariff-edit::after {
   content: attr(title);
 }
-.theme-key-avio-next .checkout-tariff-summary-static {
+.theme-key-avio-flow .checkout-tariff-summary-static {
   padding: 0;
 }
-.theme-key-avio-next .checkout-tariff-facts {
+.theme-key-avio-flow .checkout-tariff-facts {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   align-items: stretch;
@@ -885,7 +885,7 @@
   padding: 0 12px;
   background: color-mix(in srgb, var(--panel) 96%, var(--panel-2));
 }
-.theme-key-avio-next .checkout-tariff-fact {
+.theme-key-avio-flow .checkout-tariff-fact {
   display: flex !important;
   min-width: 0;
   min-height: 0;
@@ -898,19 +898,19 @@
   border-top: 0 !important;
   text-align: left;
 }
-.theme-key-avio-next .checkout-tariff-fact:nth-child(1) {
+.theme-key-avio-flow .checkout-tariff-fact:nth-child(1) {
   padding-right: 11px !important;
 }
-.theme-key-avio-next .checkout-tariff-fact:nth-child(2) {
+.theme-key-avio-flow .checkout-tariff-fact:nth-child(2) {
   padding-left: 11px !important;
   border-left: 1px solid var(--border) !important;
 }
-.theme-key-avio-next .checkout-tariff-fact:nth-child(3) {
+.theme-key-avio-flow .checkout-tariff-fact:nth-child(3) {
   grid-column: 1 / -1;
   border-top: 1px solid var(--border) !important;
   border-left: 0 !important;
 }
-.theme-key-avio-next .checkout-tariff-fact > .checkout-tariff-fact-label {
+.theme-key-avio-flow .checkout-tariff-fact > .checkout-tariff-fact-label {
   display: flex;
   order: 1;
   align-self: center;
@@ -923,12 +923,12 @@
   gap: 3px;
   text-align: left;
 }
-.theme-key-avio-next .checkout-addon-label {
+.theme-key-avio-flow .checkout-addon-label {
   font-size: 13px;
   font-weight: 400;
   line-height: 1.35;
 }
-.theme-key-avio-next .checkout-tariff-fact .checkout-addon-label {
+.theme-key-avio-flow .checkout-tariff-fact .checkout-addon-label {
   display: block;
   width: auto;
   overflow: visible;
@@ -942,12 +942,12 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: unset;
 }
-.theme-key-avio-next :is(.checkout-addon-value, .checkout-addon-unlimited) {
+.theme-key-avio-flow :is(.checkout-addon-value, .checkout-addon-unlimited) {
   font-size: 15px;
   font-weight: 650;
   letter-spacing: -.015em;
 }
-.theme-key-avio-next .checkout-tariff-fact > .checkout-addon-value {
+.theme-key-avio-flow .checkout-tariff-fact > .checkout-addon-value {
   flex: 0 0 auto;
   order: 2;
   align-self: center;
@@ -963,26 +963,26 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.theme-key-avio-next .checkout-tariff-fact .checkout-tariff-limit-icon {
+.theme-key-avio-flow .checkout-tariff-fact .checkout-tariff-limit-icon {
   flex: 0 0 13px;
 }
-.theme-key-avio-next .checkout-tariff-editor-facts {
+.theme-key-avio-flow .checkout-tariff-editor-facts {
   gap: 8px;
 }
-.theme-key-avio-next .checkout-tariff-editor-fact {
+.theme-key-avio-flow .checkout-tariff-editor-fact {
   gap: 6px;
   padding: 7px 9px 6px;
   border-radius: 14px;
   background: color-mix(in srgb, var(--panel-2) 88%, transparent);
 }
-.theme-key-avio-next .checkout-tariff-editor-copy {
+.theme-key-avio-flow .checkout-tariff-editor-copy {
   align-items: center;
 }
-.theme-key-avio-next .checkout-tariff-editor-title {
+.theme-key-avio-flow .checkout-tariff-editor-title {
   font-size: 13px;
   font-weight: 600;
 }
-.theme-key-avio-next .checkout-tariff-editor-copy small {
+.theme-key-avio-flow .checkout-tariff-editor-copy small {
   max-width: 48%;
   overflow: visible;
   font-size: 11px;
@@ -993,10 +993,10 @@
 }
 
 /* Periods. */
-.theme-key-avio-next .period-grid {
+.theme-key-avio-flow .period-grid {
   gap: 8px;
 }
-.theme-key-avio-next .period-card {
+.theme-key-avio-flow .period-card {
   min-height: 84px;
   grid-template-rows: auto auto auto;
   justify-items: start;
@@ -1008,23 +1008,23 @@
   text-align: left;
   box-shadow: none;
 }
-.theme-key-avio-next .period-card strong {
+.theme-key-avio-flow .period-card strong {
   color: var(--text);
   font-size: 14px;
   font-weight: 600;
   line-height: 1.3;
   text-align: left;
 }
-.theme-key-avio-next .period-card > span,
-.theme-key-avio-next .period-card .promo-price-pair {
+.theme-key-avio-flow .period-card > span,
+.theme-key-avio-flow .period-card .promo-price-pair {
   color: var(--text);
   font-size: 25px;
   font-weight: 650;
   line-height: 1.1;
   letter-spacing: -.025em;
 }
-.theme-key-avio-next .period-card small,
-.theme-key-avio-next .period-card em {
+.theme-key-avio-flow .period-card small,
+.theme-key-avio-flow .period-card em {
   color: var(--muted);
   font-size: 12px;
   font-style: normal;
@@ -1032,44 +1032,44 @@
   line-height: 1.35;
   text-align: left;
 }
-.theme-key-avio-next .period-card svg {
+.theme-key-avio-flow .period-card svg {
   top: 8px;
   right: 8px;
 }
-.theme-key-avio-next .period-card.active {
+.theme-key-avio-flow .period-card.active {
   border-color: color-mix(in srgb, var(--accent) 82%, var(--border));
   background: color-mix(in srgb, var(--accent) 14%, var(--panel));
   box-shadow: 0 8px 20px color-mix(in srgb, var(--accent) 14%, transparent), inset 0 0 0 1.5px var(--accent);
 }
 /* The longest period has the lowest monthly price: tint it and make that price the reason. */
-.theme-key-avio-next .period-grid .period-card:last-child:not(:only-child) {
+.theme-key-avio-flow .period-grid .period-card:last-child:not(:only-child) {
   border-color: var(--avio-good-border);
   background: linear-gradient(145deg, var(--avio-good), var(--avio-good-soft));
 }
-.theme-key-avio-next .period-grid .period-card:last-child:not(:only-child) :is(strong, small, em),
-.theme-key-avio-next .period-grid .period-card:last-child:not(:only-child) > span,
-.theme-key-avio-next .period-grid .period-card:last-child:not(:only-child) .promo-price-pair {
+.theme-key-avio-flow .period-grid .period-card:last-child:not(:only-child) :is(strong, small, em),
+.theme-key-avio-flow .period-grid .period-card:last-child:not(:only-child) > span,
+.theme-key-avio-flow .period-grid .period-card:last-child:not(:only-child) .promo-price-pair {
   color: var(--avio-good-ink);
 }
-.theme-key-avio-next .period-grid .period-card:last-child:not(:only-child) small {
+.theme-key-avio-flow .period-grid .period-card:last-child:not(:only-child) small {
   font-weight: 600;
 }
 
 /* Pay button, then payment method, promo code and balance. */
-.theme-key-avio-next .payment-method-picker-label,
-.theme-key-avio-next .section-kicker {
+.theme-key-avio-flow .payment-method-picker-label,
+.theme-key-avio-flow .section-kicker {
   font-weight: 600;
   letter-spacing: .02em;
 }
-.theme-key-avio-next .payment-method-picker-label {
+.theme-key-avio-flow .payment-method-picker-label {
   font-size: 12px;
   line-height: 1.4;
 }
-.theme-key-avio-next .payment-method-select-trigger,
-.theme-key-avio-next .balance-title-row strong {
+.theme-key-avio-flow .payment-method-select-trigger,
+.theme-key-avio-flow .balance-title-row strong {
   font-weight: 600;
 }
-.theme-key-avio-next .payment-submit-button {
+.theme-key-avio-flow .payment-submit-button {
   position: relative;
   isolation: isolate;
   min-height: 48px;
@@ -1078,10 +1078,10 @@
   font-weight: 600;
   box-shadow: 0 9px 24px color-mix(in srgb, var(--accent) 26%, transparent);
 }
-.theme-key-avio-next .payment-submit-button > svg {
+.theme-key-avio-flow .payment-submit-button > svg {
   display: none;
 }
-.theme-key-avio-next .payment-submit-button::before {
+.theme-key-avio-flow .payment-submit-button::before {
   content: "";
   display: inline-grid;
   width: 24px;
@@ -1091,7 +1091,7 @@
   border-radius: 999px;
 }
 /* Two light sweeps when checkout opens point at the button, then it stays still. */
-.theme-key-avio-next .payment-submit-button::after {
+.theme-key-avio-flow .payment-submit-button::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -1101,88 +1101,88 @@
   transform: translateX(-130%);
   animation: avio-shine 2s ease-in-out .5s 2 both;
 }
-.theme-key-avio-next .payment-submit-button:disabled::after {
+.theme-key-avio-flow .payment-submit-button:disabled::after {
   animation: none;
 }
-.theme-key-avio-next .payment-dialog-body > .payment-submit-button { order: 10; }
-.theme-key-avio-next .payment-dialog-body > .payment-divider { order: 20; margin-block: 2px 0; }
-.theme-key-avio-next .payment-dialog-body > :is(.payment-method-picker, .method-grid) { order: 30; }
-.theme-key-avio-next .payment-dialog-body > .checkout-quote-error { order: 35; }
-.theme-key-avio-next .payment-dialog-body > .checkout-promo-row { order: 40; }
-.theme-key-avio-next .payment-dialog-body > .balance-discount { order: 50; }
-.theme-key-avio-next .balance-discount {
+.theme-key-avio-flow .payment-dialog-body > .payment-submit-button { order: 10; }
+.theme-key-avio-flow .payment-dialog-body > .payment-divider { order: 20; margin-block: 2px 0; }
+.theme-key-avio-flow .payment-dialog-body > :is(.payment-method-picker, .method-grid) { order: 30; }
+.theme-key-avio-flow .payment-dialog-body > .checkout-quote-error { order: 35; }
+.theme-key-avio-flow .payment-dialog-body > .checkout-promo-row { order: 40; }
+.theme-key-avio-flow .payment-dialog-body > .balance-discount { order: 50; }
+.theme-key-avio-flow .balance-discount {
   padding: 10px;
   gap: 8px;
 }
 
 /* ── 12. Tariff catalogue and tariff change ──────────────────────────────── */
-.theme-key-avio-next .tariff-list {
+.theme-key-avio-flow .tariff-list {
   display: grid;
   gap: 10px;
 }
-.theme-key-avio-next .tariff-list .tariff-row {
+.theme-key-avio-flow .tariff-list .tariff-row {
   min-height: 104px;
   padding: 14px 16px;
 }
-.theme-key-avio-next .tariff-row .option-row-main > strong {
+.theme-key-avio-flow .tariff-row .option-row-main > strong {
   font-size: 17px;
   font-weight: 650;
   line-height: 1.25;
 }
-.theme-key-avio-next .tariff-row .option-row-main > small {
+.theme-key-avio-flow .tariff-row .option-row-main > small {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.38;
 }
-.theme-key-avio-next .tariff-row .option-row-meta > em {
+.theme-key-avio-flow .tariff-row .option-row-meta > em {
   font-size: 15px;
   font-weight: 650;
   line-height: 1.22;
 }
-.theme-key-avio-next .tariff-list .tariff-row.active {
+.theme-key-avio-flow .tariff-list .tariff-row.active {
   border-color: var(--accent);
   background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 20%, var(--panel)), color-mix(in srgb, var(--accent) 9%, var(--panel)));
   box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 20%, transparent), inset 0 0 0 2px var(--accent);
 }
-.theme-key-avio-next .tariff-list .tariff-row.active .option-row-main > strong,
-.theme-key-avio-next .tariff-list .tariff-row.active .option-row-meta > em {
+.theme-key-avio-flow .tariff-list .tariff-row.active .option-row-main > strong,
+.theme-key-avio-flow .tariff-list .tariff-row.active .option-row-meta > em {
   color: var(--accent);
 }
 /* Core exposes no tariff key in the markup, so the featured tariff is the second one
    in the admin order (Premium in this shop): warm gold and moved first. */
-.theme-key-avio-next .tariff-list .tariff-row:nth-child(2) {
+.theme-key-avio-flow .tariff-list .tariff-row:nth-child(2) {
   order: -1;
   border-color: var(--avio-gold-border);
   background: linear-gradient(145deg, var(--avio-gold), var(--avio-gold-soft));
   box-shadow: 0 9px 24px color-mix(in srgb, var(--avio-gold-border) 18%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--avio-gold-border) 30%, transparent);
 }
-.theme-key-avio-next .tariff-list .tariff-row:nth-child(2) .option-row-main > strong,
-.theme-key-avio-next .tariff-list .tariff-row:nth-child(2) .option-row-meta > em {
+.theme-key-avio-flow .tariff-list .tariff-row:nth-child(2) .option-row-main > strong,
+.theme-key-avio-flow .tariff-list .tariff-row:nth-child(2) .option-row-meta > em {
   color: var(--avio-gold-ink);
 }
-.theme-key-avio-next .tariff-list .tariff-row:nth-child(2) .option-row-main > strong::after {
+.theme-key-avio-flow .tariff-list .tariff-row:nth-child(2) .option-row-main > strong::after {
   content: "★";
   margin-left: 7px;
   color: var(--avio-gold-star);
   font-size: .82em;
 }
-.theme-key-avio-next .tariff-list .tariff-row:nth-child(2).active {
+.theme-key-avio-flow .tariff-list .tariff-row:nth-child(2).active {
   box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 20%, transparent), inset 0 0 0 2px var(--accent);
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .payment-dialog-body {
+.theme-key-avio-flow .webapp-tariff-change-dialog .payment-dialog-body {
   gap: 10px;
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .section-kicker {
+.theme-key-avio-flow .webapp-tariff-change-dialog .section-kicker {
   margin: 2px 0 0;
   color: var(--muted);
   font-size: 12px;
   font-weight: 650;
   letter-spacing: .035em;
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .tariff-action-list {
+.theme-key-avio-flow .webapp-tariff-change-dialog .tariff-action-list {
   gap: 10px;
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .tariff-action-card {
+.theme-key-avio-flow .webapp-tariff-change-dialog .tariff-action-card {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   min-height: 104px;
@@ -1193,106 +1193,106 @@
   background: color-mix(in srgb, var(--panel) 94%, transparent);
   box-shadow: none;
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .tariff-action-card > span {
+.theme-key-avio-flow .webapp-tariff-change-dialog .tariff-action-card > span {
   gap: 5px;
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .tariff-action-card strong {
+.theme-key-avio-flow .webapp-tariff-change-dialog .tariff-action-card strong {
   font-size: 17px;
   font-weight: 650;
   line-height: 1.25;
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .tariff-action-card small {
+.theme-key-avio-flow .webapp-tariff-change-dialog .tariff-action-card small {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.38;
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .tariff-action-card em {
+.theme-key-avio-flow .webapp-tariff-change-dialog .tariff-action-card em {
   padding: 5px 8px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--accent) 10%, var(--panel-2));
   font-size: 11px;
   font-weight: 650;
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .tariff-action-card.active {
+.theme-key-avio-flow .webapp-tariff-change-dialog .tariff-action-card.active {
   border-color: var(--accent);
   background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 20%, var(--panel)), color-mix(in srgb, var(--accent) 9%, var(--panel)));
   box-shadow: 0 9px 24px color-mix(in srgb, var(--accent) 16%, transparent), inset 0 0 0 2px var(--accent);
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .tariff-action-card.active strong,
-.theme-key-avio-next .webapp-tariff-change-dialog .tariff-action-card.active em {
+.theme-key-avio-flow .webapp-tariff-change-dialog .tariff-action-card.active strong,
+.theme-key-avio-flow .webapp-tariff-change-dialog .tariff-action-card.active em {
   color: var(--accent);
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .change-action-row {
+.theme-key-avio-flow .webapp-tariff-change-dialog .change-action-row {
   min-height: 70px;
   padding: 12px 14px;
   border-radius: 18px;
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .change-action-row.active {
+.theme-key-avio-flow .webapp-tariff-change-dialog .change-action-row.active {
   border-color: var(--accent);
   background: color-mix(in srgb, var(--accent) 11%, var(--panel));
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 56%, transparent);
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .change-action-row .option-row-main > strong {
+.theme-key-avio-flow .webapp-tariff-change-dialog .change-action-row .option-row-main > strong {
   font-size: 15px;
   font-weight: 650;
   line-height: 1.28;
 }
-.theme-key-avio-next .webapp-tariff-change-dialog .change-action-row .option-row-main > small {
+.theme-key-avio-flow .webapp-tariff-change-dialog .change-action-row .option-row-main > small {
   font-size: 12px;
   line-height: 1.35;
 }
 
 /* ── 13. Support ─────────────────────────────────────────────────────────── */
 /* Tickets need their full title width, independent of the viewport breakpoint. */
-.theme-key-avio-next :is(.support-conversation-card, .ticket-composer) {
+.theme-key-avio-flow :is(.support-conversation-card, .ticket-composer) {
   grid-template-columns: minmax(0, 1fr);
   min-width: 0;
 }
-.theme-key-avio-next .support-conversation-card > * {
+.theme-key-avio-flow .support-conversation-card > * {
   min-width: 0;
 }
-.theme-key-avio-next .ticket-composer-row {
+.theme-key-avio-flow .ticket-composer-row {
   flex-wrap: wrap;
 }
-.theme-key-avio-next :is(.support-screen, .support-list-card) {
+.theme-key-avio-flow :is(.support-screen, .support-list-card) {
   grid-template-rows: auto auto;
   align-content: start;
 }
-.theme-key-avio-next .support-ticket-list-scroll {
+.theme-key-avio-flow .support-ticket-list-scroll {
   height: auto;
   max-height: none;
   overflow: visible;
 }
-.theme-key-avio-next .support-ticket-list-scroll .scroll-area__viewport {
+.theme-key-avio-flow .support-ticket-list-scroll .scroll-area__viewport {
   height: auto;
   max-height: none;
   /* The scroll primitive sets overflow inline; this list scrolls with the page. */
   overflow: visible !important;
 }
-.theme-key-avio-next .support-ticket-list-scroll :is(.scroll-area__scrollbar, .scroll-area__corner) {
+.theme-key-avio-flow .support-ticket-list-scroll :is(.scroll-area__scrollbar, .scroll-area__corner) {
   display: none;
 }
-.theme-key-avio-next .support-list-card .ticket-list {
+.theme-key-avio-flow .support-list-card .ticket-list {
   padding: 0;
   gap: 12px;
 }
-.theme-key-avio-next .ticket-card {
+.theme-key-avio-flow .ticket-card {
   grid-template-columns: minmax(0, 1fr);
   gap: 12px;
   padding: 16px 18px 16px 22px;
   border-radius: 18px;
   background: var(--surface-subtle);
 }
-.theme-key-avio-next .ticket-card-main {
+.theme-key-avio-flow .ticket-card-main {
   gap: 8px;
 }
-.theme-key-avio-next .ticket-card-title {
+.theme-key-avio-flow .ticket-card-title {
   align-items: flex-start;
 }
-.theme-key-avio-next .ticket-card-title svg {
+.theme-key-avio-flow .ticket-card-title svg {
   margin-top: 3px;
 }
-.theme-key-avio-next .ticket-card-title strong {
+.theme-key-avio-flow .ticket-card-title strong {
   display: block;
   white-space: normal;
   overflow: visible;
@@ -1303,83 +1303,83 @@
   line-height: 1.45;
   font-weight: 600;
 }
-.theme-key-avio-next .ticket-card-meta {
+.theme-key-avio-flow .ticket-card-meta {
   font-weight: 400;
   line-height: 1.5;
 }
-.theme-key-avio-next .ticket-card-side {
+.theme-key-avio-flow .ticket-card-side {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
 }
-.theme-key-avio-next .ticket-card-badges {
+.theme-key-avio-flow .ticket-card-badges {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 6px;
 }
-.theme-key-avio-next .support-status-tabs-trigger {
+.theme-key-avio-flow .support-status-tabs-trigger {
   font-size: 13px;
   font-weight: 600;
   line-height: 1.35;
 }
-.theme-key-avio-next .support-status-tabs-trigger > span {
+.theme-key-avio-flow .support-status-tabs-trigger > span {
   line-height: inherit;
 }
-.theme-key-avio-next .support-field > span {
+.theme-key-avio-flow .support-field > span {
   font-size: 13px;
   font-weight: 600;
   line-height: 1.4;
 }
-.theme-key-avio-next .support-field > small {
+.theme-key-avio-flow .support-field > small {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.45;
 }
-.theme-key-avio-next .support-select-trigger {
+.theme-key-avio-flow .support-select-trigger {
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
 }
-.theme-key-avio-next :is(.support-ticket-screen .screen-head small, .ticket-detail-title small) {
+.theme-key-avio-flow :is(.support-ticket-screen .screen-head small, .ticket-detail-title small) {
   font-weight: 500;
 }
 
 /* ── 14. Devices, gifts, server status ───────────────────────────────────── */
-.theme-key-avio-next .device-card-head strong {
+.theme-key-avio-flow .device-card-head strong {
   font-weight: 600;
 }
-.theme-key-avio-next .device-card-head .device-client-label {
+.theme-key-avio-flow .device-card-head .device-client-label {
   font-weight: 500;
 }
-.theme-key-avio-next .device-card-head small,
-.theme-key-avio-next .device-meta span {
+.theme-key-avio-flow .device-card-head small,
+.theme-key-avio-flow .device-meta span {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.4;
 }
-.theme-key-avio-next .device-meta strong {
+.theme-key-avio-flow .device-meta strong {
   font-size: 13px;
   font-weight: 600;
   line-height: 1.4;
 }
-.theme-key-avio-next .gift-card-heading strong,
-.theme-key-avio-next .referral-bonus-row strong {
+.theme-key-avio-flow .gift-card-heading strong,
+.theme-key-avio-flow .referral-bonus-row strong {
   font-weight: 600;
 }
-.theme-key-avio-next .gift-status {
+.theme-key-avio-flow .gift-status {
   font-size: 12px;
   font-weight: 600;
   line-height: 1.35;
 }
-.theme-key-avio-next .gift-details {
+.theme-key-avio-flow .gift-details {
   font-size: 13px;
   line-height: 1.4;
 }
 /* Green only while Core reports the servers as operational; problems switch to peach. */
-.theme-key-avio-next .server-status-card.card {
+.theme-key-avio-flow .server-status-card.card {
   --avio-status-bg: var(--avio-good);
   --avio-status-soft: var(--avio-good-soft);
   --avio-status-border: var(--avio-good-border);
@@ -1388,30 +1388,30 @@
   background: linear-gradient(135deg, var(--avio-status-bg), var(--avio-status-soft));
   box-shadow: inset 0 1px 0 var(--avio-highlight);
 }
-.theme-key-avio-next .server-status-card.card:has(.status-problem) {
+.theme-key-avio-flow .server-status-card.card:has(.status-problem) {
   --avio-status-bg: var(--avio-peach);
   --avio-status-soft: var(--avio-peach-soft);
   --avio-status-border: var(--avio-peach-border);
   --avio-status-ink: var(--avio-peach-ink);
 }
-.theme-key-avio-next .server-status-card-action {
+.theme-key-avio-flow .server-status-card-action {
   min-height: 64px;
   padding: 10px 13px;
 }
-.theme-key-avio-next .server-status-card-icon {
+.theme-key-avio-flow .server-status-card-icon {
   color: var(--avio-status-ink);
   background: color-mix(in srgb, var(--avio-status-border) 30%, transparent);
 }
-.theme-key-avio-next .server-status-card-copy {
+.theme-key-avio-flow .server-status-card-copy {
   gap: 3px;
 }
-.theme-key-avio-next .server-status-card-copy > strong {
+.theme-key-avio-flow .server-status-card-copy > strong {
   color: var(--muted);
   font-size: 12px;
   font-weight: 600;
   line-height: 1.2;
 }
-.theme-key-avio-next .server-status-card-copy > small {
+.theme-key-avio-flow .server-status-card-copy > small {
   overflow: visible;
   color: var(--avio-status-ink);
   font-size: 14px;
@@ -1423,16 +1423,16 @@
 }
 
 /* ── 15. Auth ────────────────────────────────────────────────────────────── */
-.theme-key-avio-next .auth-legal {
+.theme-key-avio-flow .auth-legal {
   font-size: 12px;
   line-height: 1.55;
 }
-.theme-key-avio-next :is(.auth-language-trigger, .auth-language-trigger > span) {
+.theme-key-avio-flow :is(.auth-language-trigger, .auth-language-trigger > span) {
   line-height: 1.35;
 }
 
 /* ── 16. Surfaces portalled outside the shell (Core mirrors tokens onto html) ── */
-html.theme-key-avio-next :is(.app-toast, .language-select-content, .install-platform-content, .support-select-content, .field-error-tooltip) {
+html.theme-key-avio-flow :is(.app-toast, .language-select-content, .install-platform-content, .support-select-content, .field-error-tooltip) {
   background: var(--panel);
   color: var(--text);
   border: 1px solid var(--border);
@@ -1440,7 +1440,7 @@ html.theme-key-avio-next :is(.app-toast, .language-select-content, .install-plat
   font-family: var(--font-ui);
   box-shadow: var(--shadow-popover);
 }
-html.theme-key-avio-next :is(.install-platform-item, .language-select-item, .support-select-item)[data-highlighted] {
+html.theme-key-avio-flow :is(.install-platform-item, .language-select-item, .support-select-item)[data-highlighted] {
   background: var(--surface-hover);
   color: var(--text);
 }
@@ -1452,9 +1452,9 @@ html.theme-key-avio-next :is(.install-platform-item, .language-select-item, .sup
   55%, 100% { transform: translateX(130%); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .theme-key-avio-next *,
-  .theme-key-avio-next *::before,
-  .theme-key-avio-next *::after {
+  .theme-key-avio-flow *,
+  .theme-key-avio-flow *::before,
+  .theme-key-avio-flow *::after {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
@@ -1464,76 +1464,196 @@ html.theme-key-avio-next :is(.install-platform-item, .language-select-item, .sup
 /* ── 18. Responsive ──────────────────────────────────────────────────────── */
 /* Core already renders this action only for administrators. */
 @media (max-width: 1023px) {
-  .theme-key-avio-next .bottom-nav:has(> .rail-admin-entry) {
+  .theme-key-avio-flow .bottom-nav:has(> .rail-admin-entry) {
     grid-template-columns: repeat(calc(var(--bottom-nav-visible-items, 5) + 1), minmax(0, 1fr));
   }
-  .theme-key-avio-next .bottom-nav > .rail-admin-entry {
+  .theme-key-avio-flow .bottom-nav > .rail-admin-entry {
     display: grid !important;
     min-width: 0;
     color: var(--avio-admin-ink);
     background: var(--avio-admin-bg);
   }
-  .theme-key-avio-next .bottom-nav > .rail-admin-entry .bottom-nav-label {
+  .theme-key-avio-flow .bottom-nav > .rail-admin-entry .bottom-nav-label {
     font-size: 10px;
     overflow-wrap: anywhere;
   }
 }
 @media (max-width: 640px) {
-  .theme-key-avio-next .home-brand {
+  .theme-key-avio-flow .home-brand {
     padding-block: 8px;
   }
-  .theme-key-avio-next .home-bottom {
+  .theme-key-avio-flow .home-bottom {
     padding: 14px;
     border-radius: 26px;
   }
-  .theme-key-avio-next.app-shell:has(.bottom-nav) {
+  .theme-key-avio-flow.app-shell:has(.bottom-nav) {
     background-position: center, 66% top !important;
     background-attachment: scroll !important;
   }
-  .theme-key-avio-next :is(.period-card, .method-card, .option-row) {
+  .theme-key-avio-flow :is(.period-card, .method-card, .option-row) {
     border-radius: 20px;
   }
-  .theme-key-avio-next .period-card {
+  .theme-key-avio-flow .period-card {
     border-radius: 18px;
   }
 }
 @media (max-width: 640px) and (min-height: 741px) {
-  .theme-key-avio-next .phone-screen.home-screen {
+  .theme-key-avio-flow .phone-screen.home-screen {
     height: 100dvh;
     min-height: 100dvh;
     overflow-y: hidden;
   }
-  .theme-key-avio-next .home-layout {
+  .theme-key-avio-flow .home-layout {
     min-height: calc(100dvh - 64px);
     gap: 10px;
   }
-  .theme-key-avio-next .home-bottom {
+  .theme-key-avio-flow .home-bottom {
     gap: 8px;
     padding: 12px;
   }
 }
 @media (max-width: 360px) {
   /* Icon-only on the narrowest phones; the accessible name stays on the button. */
-  .theme-key-avio-next .checkout-tariff-edit {
+  .theme-key-avio-flow .checkout-tariff-edit {
     width: 34px;
     padding: 0;
   }
-  .theme-key-avio-next .checkout-tariff-edit::after {
+  .theme-key-avio-flow .checkout-tariff-edit::after {
     content: none;
   }
-  .theme-key-avio-next .checkout-tariff-facts {
+  .theme-key-avio-flow .checkout-tariff-facts {
     grid-template-columns: .88fr 1.12fr !important;
   }
-  .theme-key-avio-next .checkout-tariff-fact-label > svg {
+  .theme-key-avio-flow .checkout-tariff-fact-label > svg {
     display: none;
   }
-  .theme-key-avio-next .checkout-tariff-fact .checkout-addon-label {
+  .theme-key-avio-flow .checkout-tariff-fact .checkout-addon-label {
     font-size: 11px;
   }
-  .theme-key-avio-next .checkout-tariff-fact > .checkout-addon-value {
+  .theme-key-avio-flow .checkout-tariff-fact > .checkout-addon-value {
     font-size: 12px;
   }
-  .theme-key-avio-next .period-card :is(small, em) {
+  .theme-key-avio-flow .period-card :is(small, em) {
     font-size: 11px;
+  }
+}
+
+/* ── 19. Purchase flow and navigation ────────────────────────────────────── */
+/* Checkout and tariff picker: on short screens the pay (or "Next") button pins to the
+   bottom of the dialog until its own place scrolls into view, so paying never needs a scroll. */
+.theme-key-avio-flow .payment-dialog-body > .payment-submit-button {
+  position: sticky;
+  bottom: 0;
+  z-index: 6;
+}
+/* A pinned button covers content, so its disabled state is solid instead of translucent. */
+.theme-key-avio-flow .payment-dialog-body > .payment-submit-button:disabled {
+  opacity: 1;
+  background: color-mix(in srgb, var(--accent) 22%, var(--panel));
+  color: color-mix(in srgb, var(--text) 55%, var(--panel));
+  box-shadow: none;
+}
+/* The promo code stays one quiet dashed line until the buyer starts using it. */
+.theme-key-avio-flow .checkout-promo-row:not(.is-applied, .is-error, :focus-within):has(.checkout-promo-input:placeholder-shown) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.theme-key-avio-flow .checkout-promo-row:not(.is-applied, .is-error, :focus-within):has(.checkout-promo-input:placeholder-shown) .checkout-promo-action {
+  display: none;
+}
+.theme-key-avio-flow .checkout-promo-row:not(.is-applied, .is-error, :focus-within) .checkout-promo-input:placeholder-shown {
+  padding-inline: 16px;
+  border-style: dashed;
+  background: transparent;
+  text-align: center;
+}
+/* Tariff rows are a choice, not links: an empty ring until selected, then Core's check. */
+.theme-key-avio-flow .tariff-list .tariff-row:not(.active) .option-row-meta > svg {
+  width: 18px;
+  height: 18px;
+  color: var(--border-strong);
+  background: currentColor;
+  -webkit-mask: url("icons/circle.svg") center / contain no-repeat;
+  mask: url("icons/circle.svg") center / contain no-repeat;
+}
+.theme-key-avio-flow .tariff-list .tariff-row:not(.active) .option-row-meta > svg > * {
+  display: none;
+}
+
+/* Home: the primary action follows the situation. */
+/* No subscription and no trial: paying is the only goal, give it a bigger target. */
+.theme-key-avio-flow .home-bottom:has(.status-card-inactive):not(:has(.trial-offer-card)) [data-webapp-action="open-payment"] {
+  min-height: 52px;
+  font-size: 16px;
+  font-weight: 600;
+}
+/* Trial available: the free trial leads as an offer, paying stays one tap away. */
+.theme-key-avio-flow .home-bottom .trial-offer-card {
+  border-color: color-mix(in srgb, var(--accent) 38%, var(--border));
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 10%, var(--panel)), var(--panel));
+}
+.theme-key-avio-flow .home-bottom:has(.trial-offer-card) [data-webapp-action="open-payment"] {
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  color: var(--text);
+  box-shadow: none;
+}
+/* Expiring: renewal moves above installation (it already becomes primary). */
+.theme-key-avio-flow .home-bottom:has(.status-card-warning) .subscription-renew-action {
+  order: -1;
+}
+/* Traffic used up: buying traffic is what the user needs now. */
+.theme-key-avio-flow .home-bottom:has(.traffic-card-depleted):not(:has(.status-card-warning)) .action-stack > [data-webapp-action="open-regular-topup"] {
+  order: -1;
+  border-color: transparent;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+.theme-key-avio-flow .home-bottom:has(.traffic-card-depleted):not(:has(.status-card-warning)) .action-stack > .btn:first-child:not([data-webapp-action]) {
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  color: var(--text);
+  box-shadow: none;
+}
+
+/* Bonuses: buying a gift is the screen's main action; copying a gift link supports it. */
+.theme-key-avio-flow .gift-entry .gift-intro > .btn {
+  border-color: transparent;
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+.theme-key-avio-flow .gift-card .gift-copy .btn-primary {
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  color: var(--text);
+  box-shadow: none;
+}
+
+/* Phones: labels under the nav icons. Core hides them from five items on,
+   but at 375-460 px they fit; the admin shield stays icon-only. */
+@media (min-width: 375px) and (max-width: 460px) {
+  .theme-key-avio-flow .bottom-nav.bottom-nav-many {
+    height: 62px;
+    min-height: 62px;
+  }
+  .theme-key-avio-flow .bottom-nav.bottom-nav-many button {
+    grid-template-rows: 22px minmax(0, 12px);
+    gap: 3px;
+    padding: 6px 1px;
+  }
+  .theme-key-avio-flow .bottom-nav.bottom-nav-many .bottom-nav-label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: -.01em;
+  }
+  .theme-key-avio-flow .bottom-nav.bottom-nav-many:has(> .rail-admin-entry) {
+    grid-template-columns: repeat(var(--bottom-nav-visible-items, 5), minmax(0, 1fr)) 44px;
+  }
+  .theme-key-avio-flow .bottom-nav.bottom-nav-many > .rail-admin-entry .bottom-nav-label {
+    visibility: hidden;
+  }
+  .theme-key-avio-flow .bottom-nav.bottom-nav-many .nav-attention-dot {
+    top: 5px;
+    right: calc(50% - 17px);
   }
 }
