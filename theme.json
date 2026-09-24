@@ -1,15 +1,15 @@
 {
-  "key": "avio-landing",
+  "key": "avio-next",
   "names": {
-    "ru": "Avio — Твой интернет",
-    "en": "Avio — Your internet"
+    "ru": "Avio Next — Твой интернет",
+    "en": "Avio Next — Your internet"
   },
   "enabled": true,
   "default": false,
   "use_primary_accent": false,
   "use_in_admin": false,
   "css_file": "style.css",
-  "assets_version": 33,
+  "assets_version": 1,
   "active_variant": "light",
   "tokens": {
     "style_preset": "none",
