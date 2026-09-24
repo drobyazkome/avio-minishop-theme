@@ -1,8 +1,8 @@
 {
-  "key": "avio-flow",
+  "key": "avio-dock",
   "names": {
-    "ru": "Avio Flow — Твой интернет",
-    "en": "Avio Flow — Your internet"
+    "ru": "Avio Dock — Твой интернет",
+    "en": "Avio Dock — Your internet"
   },
   "enabled": true,
   "default": false,
