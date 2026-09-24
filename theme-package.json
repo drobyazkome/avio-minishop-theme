@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": {
-    "ru": "Avio Dock: навигация-док вместо левой колонки, экраны-окна над панорамой, главная-герой, оплата боковой панелью на десктопе и нижним листом на телефоне, трафик плитками.",
-    "en": "Avio Dock: a dock instead of the left rail, screens as glass windows over the panorama, hero home, checkout as a side sheet on desktop and a bottom sheet on phones, traffic as tiles."
+    "ru": "Avio Dock: навигация-док вместо левой колонки, экраны-окна над панорамой, главная по оси дока, оплата боковой панелью на десктопе и нижним листом на телефоне, трафик плитками.",
+    "en": "Avio Dock: a dock instead of the left rail, screens as glass windows over the panorama, home centred on the dock axis, checkout as a side sheet on desktop and a bottom sheet on phones, traffic as tiles."
   },
   "author": {
     "name": "Avio"

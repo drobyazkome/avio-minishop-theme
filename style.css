@@ -1667,8 +1667,8 @@ html.theme-key-avio-dock :is(.install-platform-item, .language-select-item, .sup
 /* ── 20. Avio Dock: navigation as a dock, screens as windows over the panorama ──
    Desktop (≥ 1024 px): Core turns the phone tab bar into a 250 px left rail. Here the
    same element becomes a floating dock at the bottom centre, the panorama gets the
-   full width, inner screens sit in one glass window, home is a left-aligned hero next
-   to the arch, and checkout slides in as a full-height sheet.
+   full width, inner screens sit in one glass window, home is centred on the dock's
+   axis, and checkout slides in as a full-height sheet.
    Phones keep their tab bar; the active tab takes the colour of its dock tile. */
 
 /* Tile colours, shared by the dock and the phone tab bar. */
@@ -1838,38 +1838,30 @@ html.theme-key-avio-dock :is(.install-platform-item, .language-select-item, .sup
     background: var(--border);
   }
 
-  /* Home: a left-aligned hero, so the arch on the right of the panorama stays open. */
+  /* Home: logo and subscription card on the dock's centre axis, gathered in the middle
+     of the screen instead of Core's logo-at-top, card-at-bottom split. */
   .theme-key-avio-dock .phone-screen.home-screen {
     padding-top: 36px;
   }
   .theme-key-avio-dock .home-layout {
-    width: min(100%, 1160px);
+    width: min(100%, 500px);
     min-height: calc(100dvh - 36px - 128px);
-    grid-template-columns: minmax(380px, 460px) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto auto;
     align-content: center;
-    gap: 18px 0;
-  }
-  .theme-key-avio-dock .home-layout > * {
-    grid-column: 1;
+    justify-self: center;
+    gap: 18px;
   }
   .theme-key-avio-dock .home-layout > .home-brand {
     align-self: end;
-    justify-items: start;
-    text-align: left;
+    justify-items: center;
+    text-align: center;
     padding-block: 0;
   }
   .theme-key-avio-dock .home-bottom {
     align-self: start;
     justify-self: stretch;
     width: 100%;
-  }
-
-  /* Sign-in follows the same left line as the home hero. */
-  .theme-key-avio-dock .phone-screen.auth-screen {
-    margin-left: max(var(--desktop-page-gutter), calc((100vw - 1160px) / 2));
-    margin-right: auto;
-    padding-bottom: 16px;
   }
 
   /* Inner screens: one glass window. The glass is a pseudo-element so the window
