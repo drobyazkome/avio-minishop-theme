@@ -1,8 +1,16 @@
 # Avio Flow — Твой интернет
 
-Версия 1.7.0, ключ `avio-flow`, ветка `avio-flow`. Это Avio Next 1.6.0 с доработанной
+Версия 1.7.0, ключ `avio-flow`, ветка `main`. Это Avio Next 1.6.0 с доработанной
 воронкой покупки и навигацией. Тема ставится рядом с `avio-landing` и `avio-next`,
 поэтому варианты можно сравнить в предпросмотре, прежде чем активировать один из них.
+
+## Версии в этом репозитории
+
+- `main` и `avio-flow` — Avio Flow 1.7.0, эта тема.
+- `avio-next` — Avio Next 1.6.0, `avio-dock` — Avio Dock 1.8.1.
+- Тег `avio-landing-1.5.15` — прежняя Avio (ключ `avio-landing`), которая была в `main` до 25.09.2026.
+- Avio Soft (тема, собранная с нуля) живёт в отдельном репозитории:
+  https://github.com/drobyazkome/avio-soft-minishop-theme. Ветка `avio-soft` здесь больше не обновляется.
 
 ## Что изменилось относительно Avio Next 1.6.0
 
@@ -65,31 +73,93 @@
 
 ## Скриншоты
 
-![Главная на десктопе](screenshots/home-desktop-light.webp)
+Сняты 25.09.2026 на demo-сборке Core dev: телефон 390 × 844, компьютер 1440 × 900.
+
+### Телефон, светлая тема
+
+| Нет подписки | Главная | Тарифы |
+| --- | --- | --- |
+| <img src="screenshots/start-mobile-light.webp" width="240" alt="Нет подписки, телефон, светлая тема"> | <img src="screenshots/home-mobile-light.webp" width="240" alt="Главная, телефон, светлая тема"> | <img src="screenshots/tariffs-mobile-light.webp" width="240" alt="Тарифы, телефон, светлая тема"> |
+
+| Оплата | Установка | Бонусы |
+| --- | --- | --- |
+| <img src="screenshots/checkout-mobile-light.webp" width="240" alt="Оплата, телефон, светлая тема"> | <img src="screenshots/install-mobile-light.webp" width="240" alt="Установка, телефон, светлая тема"> | <img src="screenshots/bonuses-mobile-light.webp" width="240" alt="Бонусы, телефон, светлая тема"> |
+
+| Устройства | Поддержка | Настройки |
+| --- | --- | --- |
+| <img src="screenshots/devices-mobile-light.webp" width="240" alt="Устройства, телефон, светлая тема"> | <img src="screenshots/support-mobile-light.webp" width="240" alt="Поддержка, телефон, светлая тема"> | <img src="screenshots/settings-mobile-light.webp" width="240" alt="Настройки, телефон, светлая тема"> |
+
+### Телефон, тёмная тема
+
+| Нет подписки | Главная | Тарифы |
+| --- | --- | --- |
+| <img src="screenshots/start-mobile-dark.webp" width="240" alt="Нет подписки, телефон, тёмная тема"> | <img src="screenshots/home-mobile-dark.webp" width="240" alt="Главная, телефон, тёмная тема"> | <img src="screenshots/tariffs-mobile-dark.webp" width="240" alt="Тарифы, телефон, тёмная тема"> |
+
+| Оплата | Установка | Бонусы |
+| --- | --- | --- |
+| <img src="screenshots/checkout-mobile-dark.webp" width="240" alt="Оплата, телефон, тёмная тема"> | <img src="screenshots/install-mobile-dark.webp" width="240" alt="Установка, телефон, тёмная тема"> | <img src="screenshots/bonuses-mobile-dark.webp" width="240" alt="Бонусы, телефон, тёмная тема"> |
+
+| Устройства | Поддержка | Настройки |
+| --- | --- | --- |
+| <img src="screenshots/devices-mobile-dark.webp" width="240" alt="Устройства, телефон, тёмная тема"> | <img src="screenshots/support-mobile-dark.webp" width="240" alt="Поддержка, телефон, тёмная тема"> | <img src="screenshots/settings-mobile-dark.webp" width="240" alt="Настройки, телефон, тёмная тема"> |
+
+### Компьютер, светлая тема
+
+| Нет подписки | Главная |
+| --- | --- |
+| <img src="screenshots/start-desktop-light.webp" width="400" alt="Нет подписки, компьютер, светлая тема"> | <img src="screenshots/home-desktop-light.webp" width="400" alt="Главная, компьютер, светлая тема"> |
+
+| Тарифы | Оплата |
+| --- | --- |
+| <img src="screenshots/tariffs-desktop-light.webp" width="400" alt="Тарифы, компьютер, светлая тема"> | <img src="screenshots/checkout-desktop-light.webp" width="400" alt="Оплата, компьютер, светлая тема"> |
+
+| Установка | Бонусы |
+| --- | --- |
+| <img src="screenshots/install-desktop-light.webp" width="400" alt="Установка, компьютер, светлая тема"> | <img src="screenshots/bonuses-desktop-light.webp" width="400" alt="Бонусы, компьютер, светлая тема"> |
+
+| Устройства | Поддержка |
+| --- | --- |
+| <img src="screenshots/devices-desktop-light.webp" width="400" alt="Устройства, компьютер, светлая тема"> | <img src="screenshots/support-desktop-light.webp" width="400" alt="Поддержка, компьютер, светлая тема"> |
+
+| Настройки |
+| --- |
+| <img src="screenshots/settings-desktop-light.webp" width="400" alt="Настройки, компьютер, светлая тема"> |
+
+### Компьютер, тёмная тема
+
+| Нет подписки | Главная |
+| --- | --- |
+| <img src="screenshots/start-desktop-dark.webp" width="400" alt="Нет подписки, компьютер, тёмная тема"> | <img src="screenshots/home-desktop-dark.webp" width="400" alt="Главная, компьютер, тёмная тема"> |
+
+| Тарифы | Оплата |
+| --- | --- |
+| <img src="screenshots/tariffs-desktop-dark.webp" width="400" alt="Тарифы, компьютер, тёмная тема"> | <img src="screenshots/checkout-desktop-dark.webp" width="400" alt="Оплата, компьютер, тёмная тема"> |
+
+| Установка | Бонусы |
+| --- | --- |
+| <img src="screenshots/install-desktop-dark.webp" width="400" alt="Установка, компьютер, тёмная тема"> | <img src="screenshots/bonuses-desktop-dark.webp" width="400" alt="Бонусы, компьютер, тёмная тема"> |
+
+| Устройства | Поддержка |
+| --- | --- |
+| <img src="screenshots/devices-desktop-dark.webp" width="400" alt="Устройства, компьютер, тёмная тема"> | <img src="screenshots/support-desktop-dark.webp" width="400" alt="Поддержка, компьютер, тёмная тема"> |
+
+| Настройки |
+| --- |
+| <img src="screenshots/settings-desktop-dark.webp" width="400" alt="Настройки, компьютер, тёмная тема"> |
+
+### Состояния главной, маленький экран, вход
 
 | Триал | Трафик закончился | Подписка истекает |
 | --- | --- | --- |
-| <img src="screenshots/flow-trial-mobile-light.webp" width="260" alt="Главная с доступным триалом"> | <img src="screenshots/flow-traffic-depleted-mobile-light.webp" width="260" alt="Главная, трафик закончился"> | <img src="screenshots/flow-expiring-mobile-light.webp" width="260" alt="Главная, подписка истекает"> |
+| <img src="screenshots/flow-trial-mobile-light.webp" width="240" alt="Главная с доступным триалом"> | <img src="screenshots/flow-traffic-depleted-mobile-light.webp" width="240" alt="Главная, трафик закончился"> | <img src="screenshots/flow-expiring-mobile-light.webp" width="240" alt="Главная, подписка истекает"> |
 
-| Оплата на 375×667 | Выбор тарифа на 375×667 | Бонусы |
+| Оплата на 375 × 667 | Выбор тарифа на 375 × 667 | Вход |
 | --- | --- | --- |
-| <img src="screenshots/flow-payment-375x667-light.webp" width="260" alt="Оплата на маленьком экране"> | <img src="screenshots/flow-tariff-picker-375x667-light.webp" width="260" alt="Выбор тарифа на маленьком экране"> | <img src="screenshots/flow-bonuses-mobile-light.webp" width="260" alt="Бонусы"> |
+| <img src="screenshots/flow-payment-375x667-light.webp" width="240" alt="Оплата на маленьком экране"> | <img src="screenshots/flow-tariff-picker-375x667-light.webp" width="240" alt="Выбор тарифа на маленьком экране"> | <img src="screenshots/auth-mobile-light.webp" width="240" alt="Вход"> |
 
-| Главная | Тёмный режим | Оплата |
-| --- | --- | --- |
-| <img src="screenshots/home-mobile-light.webp" width="260" alt="Главная"> | <img src="screenshots/home-mobile-dark.webp" width="260" alt="Главная в тёмном режиме"> | <img src="screenshots/payment-mobile-light.webp" width="260" alt="Оплата"> |
-
-| Оплата, тёмный режим | Тарифы, тёмный режим | Установка |
-| --- | --- | --- |
-| <img src="screenshots/payment-mobile-dark.webp" width="260" alt="Оплата в тёмном режиме"> | <img src="screenshots/tariffs-mobile-dark.webp" width="260" alt="Выбор тарифа в тёмном режиме"> | <img src="screenshots/install-mobile-light.webp" width="260" alt="Установка"> |
-
-| Настройки | Настройки, тёмный режим | Нет подписки |
-| --- | --- | --- |
-| <img src="screenshots/settings-mobile-light.webp" width="260" alt="Настройки"> | <img src="screenshots/settings-mobile-dark.webp" width="260" alt="Настройки в тёмном режиме"> | <img src="screenshots/home-inactive-mobile-light.webp" width="260" alt="Главная без подписки"> |
-
-| Вход | Устройства без подписки |
-| --- | --- |
-| <img src="screenshots/auth-mobile-light.webp" width="260" alt="Вход"> | <img src="screenshots/devices-inactive-mobile-dark.webp" width="260" alt="Устройства без подписки в тёмном режиме"> |
+| Устройства без подписки |
+| --- |
+| <img src="screenshots/devices-inactive-mobile-dark.webp" width="240" alt="Устройства без подписки в тёмном режиме"> |
 
 ## Что уже было в Avio Next 1.6.0 (по сравнению с avio-landing 1.5.15)
 
@@ -143,7 +213,7 @@ SVG-масками Lucide, которые красятся цветом текс
 ## Установка
 
 1. **Админка → Внешний вид → Добавить темы**, загрузите `avio-flow-theme.zip` или
-   укажите этот репозиторий с веткой `avio-flow`.
+   укажите этот репозиторий (`https://github.com/drobyazkome/avio-minishop-theme`, ветка `main`).
 2. Откройте предпросмотр **Avio Flow — Твой интернет** и нажмите **Активировать**, когда
    всё устроит. `avio-landing` и `avio-next` остаются в библиотеке для отката.
 3. Логотип берётся из настроек бренда, как и раньше. Для него подходит
